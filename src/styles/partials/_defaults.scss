@@ -11,3 +11,12 @@ body {
   background-color: colors.$light_100;
   font-family: vars.$font-family;
 }
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}

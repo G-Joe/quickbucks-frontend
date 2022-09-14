@@ -1,0 +1,41 @@
+@use "styles/partials/vars";
+@use "styles/partials/colors";
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 8px;
+
+  label {
+    font-weight: vars.$regular;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.0025em;
+    color: colors.$grey_200;
+  }
+
+  .input-wrapper {
+    position: relative;
+
+    .vector-img {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      right: 0;
+    }
+
+    input {
+      height: 56px;
+      border: 1px solid #dcd6e2;
+      border-radius: 4px;
+      padding-left: 16px;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+        border-color: colors.$primaryYellow;
+      }
+    }
+  }
+}

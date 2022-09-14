@@ -6,6 +6,7 @@ const Dots = () => {
       <div className="dot dot-active"></div>
       <div className="dot"></div>
       <div className="dot"></div>
+      <div className="dot"></div>
     </div>
   );
 };

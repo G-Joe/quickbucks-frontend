@@ -21,26 +21,6 @@
       border-bottom-left-radius: 10px;
       position: relative;
 
-      .quick-loan-section {
-        position: absolute;
-        left: 141px;
-        bottom: 78px;
-        color: colors.$white;
-
-        .content {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-        }
-
-        p {
-          width: 236px;
-          margin-top: 30px;
-        }
-      }
-
       .dots-wrapper {
         position: absolute;
         top: 861px;
@@ -52,6 +32,90 @@
       background-color: colors.$white;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
+      padding: 118px 123px 89px 127px;
+      position: relative;
+
+      .rect-1-img {
+        position: absolute;
+        top: 393px;
+        right: 0;
+      }
+
+      .rect-2-img {
+        position: absolute;
+        top: 473px;
+        right: 0;
+      }
+
+      .flag-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        margin-right: -1px;
+      }
+
+      .form-wrapper {
+        text-align: center;
+
+        .logo-wrapper {
+          padding-bottom: 46px;
+
+          .logo-img {
+            width: 272px;
+            height: 71px;
+          }
+        }
+
+        .signin-text {
+          font-weight: vars.$medium;
+          font-size: 14px;
+          line-height: 24px;
+          letter-spacing: 0.1px;
+          color: colors.$dark_100;
+          margin-bottom: 20px;
+        }
+      }
+
+      .form {
+        .form-group:first-child {
+          margin-bottom: 10px;
+        }
+
+        .forgot-password {
+          display: block;
+          text-align: left;
+          margin: 16px 0;
+          font-weight: vars.$regular;
+          font-size: 14px;
+          line-height: 19px;
+          letter-spacing: 0.0025em;
+          color: colors.$secondaryBlue;
+          width: fit-content;
+        }
+
+        .signup {
+          font-weight: vars.$medium;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0.15px;
+          margin-top: 20px;
+          margin-bottom: 22px;
+
+          &-new {
+            color: colors.$secondaryBlue;
+          }
+
+          &-main {
+            color: colors.$primaryYellow;
+          }
+        }
+
+        .mobile-wrapper {
+          display: flex;
+          gap: 11px;
+          justify-content: center;
+        }
+      }
     }
   }
 }
