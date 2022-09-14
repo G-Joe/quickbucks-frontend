@@ -45,12 +45,14 @@ const SignInOne = () => {
               <a
                 target="_blank"
                 href="https://apps.apple.com/us/app/quickbucks/id1423259718"
+                rel="noreferrer"
               >
                 <img className="apple-img" src={appleImg} alt="apple-img" />
               </a>
               <a
                 target="_blank"
                 href="https://play.google.com/store/apps/details?id=com.accessbankplc.quickbucks&hl=en&gl=US"
+                rel="noreferrer"
               >
                 <img
                   className="android-img"
