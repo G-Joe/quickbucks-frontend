@@ -1,0 +1,33 @@
+.dots-img {
+  position: absolute;
+}
+
+.person {
+  position: absolute;
+  width: 268px;
+  height: 301px;
+
+  &-1-img {
+    top: 50px;
+    right: 75px;
+  }
+
+  &-2-img {
+    top: 363px;
+    left: 83px;
+  }
+}
+
+.rectangle-1-img {
+  position: absolute;
+  z-index: -1;
+  top: 242px;
+  right: 92px;
+}
+
+.ellipse-1-img {
+  position: absolute;
+  z-index: -1;
+  bottom: 448px;
+  right: 50px;
+}

@@ -1,0 +1,13 @@
+@use "./vars";
+@use "./colors";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: colors.$light_100;
+  font-family: vars.$font-family;
+}

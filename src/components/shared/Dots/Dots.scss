@@ -1,0 +1,17 @@
+@use "styles/partials/colors";
+
+.dots-wrapper {
+  display: flex;
+  gap: 8px;
+
+  .dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: colors.$grey_100;
+
+    &-active {
+      background: colors.$white;
+    }
+  }
+}
