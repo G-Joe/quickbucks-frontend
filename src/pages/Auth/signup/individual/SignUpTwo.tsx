@@ -6,7 +6,7 @@ import Input from "components/shared/Input/Input";
 import LeftPane from "components/Auth/LeftPane/LeftPane";
 import Button from "components/shared/Button/Button";
 
-const SignUpOne = () => {
+const SignUpTwo = () => {
   return (
     <div className="auth-wrapper">
       <div className="pane pane-left">
@@ -51,4 +51,4 @@ const SignUpOne = () => {
   );
 };
 
-export default SignUpOne;
+export default SignUpTwo;
