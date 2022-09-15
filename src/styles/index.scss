@@ -28,6 +28,10 @@
       }
     }
 
+    p {
+      margin-bottom: 0;
+    }
+
     &-right {
       background-color: colors.$white;
       border-top-right-radius: 10px;
@@ -110,6 +114,27 @@
             width: fit-content;
           }
 
+          .otp-wrapper {
+            margin-top: 20px;
+
+            .otp-text {
+              font-weight: vars.$medium;
+              font-size: 16px;
+              line-height: 24px;
+              text-align: center;
+              letter-spacing: 0.5px;
+              margin-bottom: 0 !important;
+
+              &-1 {
+                color: colors.$grey_200;
+              }
+
+              &-2 {
+                color: colors.$secondaryBlue;
+              }
+            }
+          }
+
           .signup {
             font-weight: vars.$medium;
             font-size: 16px;
@@ -157,16 +182,6 @@
   .modal-container {
     width: 296px;
     margin: 0 auto;
-
-    p,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin: 0 !important;
-    }
 
     h2 {
       font-weight: 500;

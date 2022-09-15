@@ -45,6 +45,11 @@ const SignUpTwo = () => {
                 variant="primary"
               />
             </div>
+
+            <div className="otp-wrapper">
+              <p className="otp-text otp-text-1">Didn’t get an OTP?</p>
+              <p className="otp-text otp-text-2">Resend OTP</p>
+            </div>
           </form>
         </div>
       </div>
