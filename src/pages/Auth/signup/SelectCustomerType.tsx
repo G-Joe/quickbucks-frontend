@@ -50,6 +50,7 @@ const SelectCustomerType = () => {
               label="Proceed"
               to="/signup/individual/1"
               variant={box === 0 ? "disabled" : "primary"}
+              disabled={box === 0}
             />
             <p className="signup signup-new">
               Already a user? &nbsp;

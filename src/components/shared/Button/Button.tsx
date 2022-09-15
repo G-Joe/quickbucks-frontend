@@ -4,9 +4,10 @@ import "./Button.scss";
 type ButtonProps = {
   label: string;
   type?: "button" | "submit" | "reset" | undefined;
-  to: string;
+  to?: string;
   variant?: "primary" | "disabled" | "secondary" | "secondary--outline";
   disabled?: boolean;
+  onClick?: () => void;
 };
 
 const Button = (props: ButtonProps) => {
@@ -15,7 +16,7 @@ const Button = (props: ButtonProps) => {
   const BTN_BG = disabled ? "disabled" : variant;
 
   return (
-    <Link to={to}>
+    <Link to={to || ""}>
       <button {...props} type={type} className={`btn btn-${BTN_BG}`}>
         {label}
       </button>
