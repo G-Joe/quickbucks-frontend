@@ -5,6 +5,7 @@ import rect2Img from "assets/Rectangle 4 copy.svg";
 import Input from "components/shared/Input/Input";
 import LeftPane from "components/Auth/LeftPane/LeftPane";
 import Button from "components/shared/Button/Button";
+import Select from "components/shared/Input/Select";
 
 const SignUpThree = () => {
   return (
@@ -25,23 +26,38 @@ const SignUpThree = () => {
 
           <form className="form">
             <p className="onetime-text">
-              A One Time Password (OTP) has been sent to your BVN registered{" "}
-              <br />
-              phone number or email <br />
-              <span>+234813*****35</span> or <br />{" "}
-              <span>ero*****@gmail.com</span>
+              Before you begin to enjoy instant <br /> loans we need just a few
+              pieces
+              <br /> of missing information
             </p>
-            <Input label="OTP" type="password" />
+            <Input
+              label="Name"
+              type="text"
+              placeholder="Solomon Adebayo Abey"
+            />
+            <Input label="Date of birth" type="date" />
+            <Select label="Gender">
+              <option value="">Male</option>
+              <option value="">Female</option>
+            </Select>
+            <Select label="State of residency">
+              <option value="">Lagos</option>
+              <option value="">Abuja</option>
+              <option value="">Edo</option>
+              <option value="">Ogun</option>
+              <option value="">Ondo</option>
+            </Select>
+            <Input label="Residential address" type="text" />
 
             <div className="row">
               <Button
                 label="previous"
-                to="/signup/individual/1"
+                to="/signup/individual/2"
                 variant="secondary--outline"
               />
               <Button
                 label="next"
-                to="/signup/individual/3"
+                to="/signup/individual/4"
                 variant="primary"
               />
             </div>

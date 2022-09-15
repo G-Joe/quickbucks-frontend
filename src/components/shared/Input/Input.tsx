@@ -4,6 +4,7 @@ import "./Input.scss";
 type InputProps = {
   label: string;
   type: string;
+  placeholder?: string;
 };
 
 const Input = (props: InputProps) => {
