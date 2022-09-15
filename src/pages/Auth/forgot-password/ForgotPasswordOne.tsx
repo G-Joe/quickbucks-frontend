@@ -8,7 +8,7 @@ import LeftPane from "components/Auth/LeftPane/LeftPane";
 import Button from "components/shared/Button/Button";
 import MobileAppBox from "components/Auth/MobileAppBox/MobileAppBox";
 
-const SignIn = () => {
+const ForgotPasswordOne = () => {
   return (
     <div className="auth-wrapper">
       <div className="pane pane-left">
@@ -25,19 +25,16 @@ const SignIn = () => {
             <img className="logo-img" src={logoImg} alt="logo-img" />
           </div>
           <p className="signin-text">
-            Sign in to continue meeting your your urgent needs
+            Please enter your phone number tied to your account
           </p>
           <form className="form">
-            <Input label="Username" type="text" />
-            <Input label="Password" type="password" />
-            <Link className="forgot-password" to="/forgot-password/1">
-              Forgot password?
-            </Link>
-            <Button label="login" variant="primary" />
+            <Input label="Phone number" type="number" />
+
+            <Button to="/forgot-password/2" label="submit" variant="primary" />
             <p className="signup signup-new">
-              New user? &nbsp;
-              <Link className="signup signup-main" to="/signup">
-                Sign Up
+              Already a user? &nbsp;
+              <Link className="signup signup-main" to="/login">
+                Sign In
               </Link>
             </p>
             <MobileAppBox />
@@ -48,4 +45,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default ForgotPasswordOne;

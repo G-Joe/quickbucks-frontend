@@ -8,6 +8,9 @@ import SignUpTwo from "pages/Auth/signup/individual/SignUpTwo";
 import SignUpThree from "pages/Auth/signup/individual/SignUpThree";
 import SignUpFour from "pages/Auth/signup/individual/SignUpFour";
 import SignUpFive from "pages/Auth/signup/individual/SignUpFive";
+import ForgotPasswordOne from "pages/Auth/forgot-password/ForgotPasswordOne";
+import ForgotPasswordTwo from "pages/Auth/forgot-password/ForgotPasswordTwo";
+import ForgotPasswordThree from "pages/Auth/forgot-password/ForgotPasswordThree";
 import "styles/index.scss";
 
 function App() {
@@ -23,6 +26,9 @@ function App() {
         <Route path="/signup/individual/3" element={<SignUpThree />} />
         <Route path="/signup/individual/4" element={<SignUpFour />} />
         <Route path="/signup/individual/5" element={<SignUpFive />} />
+        <Route path="/forgot-password/1" element={<ForgotPasswordOne />} />
+        <Route path="/forgot-password/2" element={<ForgotPasswordTwo />} />
+        <Route path="/forgot-password/3" element={<ForgotPasswordThree />} />
       </Routes>
     </div>
   );

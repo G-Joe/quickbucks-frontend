@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import logoImg from "assets/Frame 20.png";
 import flagImg from "assets/Frame 12.svg";
 import rect1Img from "assets/Rectangle 4.svg";
@@ -6,9 +5,8 @@ import rect2Img from "assets/Rectangle 4 copy.svg";
 import Input from "components/shared/Input/Input";
 import LeftPane from "components/Auth/LeftPane/LeftPane";
 import Button from "components/shared/Button/Button";
-import MobileAppBox from "components/Auth/MobileAppBox/MobileAppBox";
 
-const SignIn = () => {
+const ForgotPasswordTwo = () => {
   return (
     <div className="auth-wrapper">
       <div className="pane pane-left">
@@ -24,23 +22,20 @@ const SignIn = () => {
           <div className="logo-wrapper">
             <img className="logo-img" src={logoImg} alt="logo-img" />
           </div>
-          <p className="signin-text">
-            Sign in to continue meeting your your urgent needs
+          <p className="onetime-text">
+            A One Time Password (OTP) has been sent to your BVN registered{" "}
+            <br />
+            phone number <br />
+            <span>+234813*****35</span>
           </p>
           <form className="form">
-            <Input label="Username" type="text" />
-            <Input label="Password" type="password" />
-            <Link className="forgot-password" to="/forgot-password/1">
-              Forgot password?
-            </Link>
-            <Button label="login" variant="primary" />
-            <p className="signup signup-new">
-              New user? &nbsp;
-              <Link className="signup signup-main" to="/signup">
-                Sign Up
-              </Link>
-            </p>
-            <MobileAppBox />
+            <Input label="OTP" type="password" />
+
+            <Button to="/forgot-password/3" label="submit" variant="primary" />
+            <div className="otp-wrapper">
+              <p className="otp-text otp-text-1">Didn’t get an OTP?</p>
+              <p className="otp-text otp-text-2">Resend OTP</p>
+            </div>
           </form>
         </div>
       </div>
@@ -48,4 +43,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default ForgotPasswordTwo;
