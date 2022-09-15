@@ -5,6 +5,7 @@ import logoImg from "assets/Frame 20.png";
 import flagImg from "assets/Frame 12.svg";
 import rect1Img from "assets/Rectangle 4.svg";
 import rect2Img from "assets/Rectangle 4 copy.svg";
+import tcImg from "assets/images/72431-terms-and-conditions 1.png";
 import Input from "components/shared/Input/Input";
 import LeftPane from "components/Auth/LeftPane/LeftPane";
 import Button from "components/shared/Button/Button";
@@ -27,7 +28,6 @@ const SignUpFive = () => {
 
   return (
     <>
-      {console.log(isModalOpen)}
       <div className="auth-wrapper">
         <div className="pane pane-left">
           <LeftPane />
@@ -71,15 +71,40 @@ const SignUpFive = () => {
           </div>
         </div>
       </div>
-      <Modal
-        title="Basic Modal"
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+      <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk}>
+        <div className="modal-container">
+          <h2>Terms and conditions</h2>
+
+          <div className="tc-img-wrapper">
+            <img className="tc-img" src={tcImg} alt="tc-img" />
+          </div>
+
+          <p className="tc-text tc-text--black">
+            By tapping the button below, you agree to QuickBucks Terms &
+            Conditions and Privacy Policy
+          </p>
+
+          <p className="tc-text tc-text--blue">
+            To learn more see our <br />
+            <span className="tc-text tc-text--yellow">
+              Terms & Conditions and Privacy Policy
+            </span>{" "}
+          </p>
+
+          <div className="row row-modal">
+            <Button
+              label="Cancel"
+              type="button"
+              onClick={handleCancel}
+              variant="secondary--outline"
+            />
+            <Button
+              label="Accept Terms"
+              onClick={handleCancel}
+              variant="primary"
+            />
+          </div>
+        </div>
       </Modal>
     </>
   );
