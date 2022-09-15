@@ -3,8 +3,6 @@ import logoImg from "assets/Frame 20.png";
 import flagImg from "assets/Frame 12.svg";
 import rect1Img from "assets/Rectangle 4.svg";
 import rect2Img from "assets/Rectangle 4 copy.svg";
-import appleImg from "assets/App Store Badge US Black.svg";
-import androidImg from "assets/Google Play Badge US.svg";
 import Input from "components/shared/Input/Input";
 import LeftPane from "components/Auth/LeftPane/LeftPane";
 import Button from "components/shared/Button/Button";

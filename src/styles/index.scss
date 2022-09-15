@@ -84,6 +84,19 @@
           }
         }
 
+        .onetime-text {
+          font-weight: vars.$medium;
+          font-size: 18px;
+          line-height: 24px;
+          letter-spacing: 0.15px;
+          color: colors.$dark_100;
+          margin-bottom: 20px;
+
+          span {
+            color: colors.$primaryYellow;
+          }
+        }
+
         .form {
           .forgot-password {
             display: block;
