@@ -1,4 +1,3 @@
-import eyeImg from "assets/Group.svg";
 import "./Input.scss";
 
 type InputProps = {
