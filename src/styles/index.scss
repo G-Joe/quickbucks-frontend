@@ -32,8 +32,11 @@
       background-color: colors.$white;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
-      padding: 118px 123px 89px 127px;
       position: relative;
+      padding: 0 123px 0 127px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       .rect-1-img {
         position: absolute;
@@ -74,46 +77,40 @@
           color: colors.$dark_100;
           margin-bottom: 20px;
         }
-      }
 
-      .form {
-        .form-group:first-child {
-          margin-bottom: 10px;
-        }
+        .form {
+          .form-group:first-child {
+            margin-bottom: 10px;
+          }
 
-        .forgot-password {
-          display: block;
-          text-align: left;
-          margin: 16px 0;
-          font-weight: vars.$regular;
-          font-size: 14px;
-          line-height: 19px;
-          letter-spacing: 0.0025em;
-          color: colors.$secondaryBlue;
-          width: fit-content;
-        }
-
-        .signup {
-          font-weight: vars.$medium;
-          font-size: 16px;
-          line-height: 24px;
-          letter-spacing: 0.15px;
-          margin-top: 20px;
-          margin-bottom: 22px;
-
-          &-new {
+          .forgot-password {
+            display: block;
+            text-align: left;
+            margin: 16px 0;
+            font-weight: vars.$regular;
+            font-size: 14px;
+            line-height: 19px;
+            letter-spacing: 0.0025em;
             color: colors.$secondaryBlue;
+            width: fit-content;
           }
 
-          &-main {
-            color: colors.$primaryYellow;
-          }
-        }
+          .signup {
+            font-weight: vars.$medium;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.15px;
+            margin-top: 20px;
+            margin-bottom: 22px;
 
-        .mobile-wrapper {
-          display: flex;
-          gap: 11px;
-          justify-content: center;
+            &-new {
+              color: colors.$secondaryBlue;
+            }
+
+            &-main {
+              color: colors.$primaryYellow;
+            }
+          }
         }
       }
     }

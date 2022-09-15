@@ -8,8 +8,9 @@ import androidImg from "assets/Google Play Badge US.svg";
 import Input from "components/shared/Input/Input";
 import LeftPane from "components/Auth/LeftPane/LeftPane";
 import Button from "components/shared/Button/Button";
+import MobileAppBox from "components/Auth/MobileAppBox/MobileAppBox";
 
-const SignInOne = () => {
+const SignIn = () => {
   return (
     <div className="auth-wrapper">
       <div className="pane pane-left">
@@ -41,26 +42,7 @@ const SignInOne = () => {
                 Sign Up
               </Link>
             </p>
-            <div className="mobile-wrapper">
-              <a
-                target="_blank"
-                href="https://apps.apple.com/us/app/quickbucks/id1423259718"
-                rel="noreferrer"
-              >
-                <img className="apple-img" src={appleImg} alt="apple-img" />
-              </a>
-              <a
-                target="_blank"
-                href="https://play.google.com/store/apps/details?id=com.accessbankplc.quickbucks&hl=en&gl=US"
-                rel="noreferrer"
-              >
-                <img
-                  className="android-img"
-                  src={androidImg}
-                  alt="android-img"
-                />
-              </a>
-            </div>
+            <MobileAppBox />
           </form>
         </div>
       </div>
@@ -68,4 +50,4 @@ const SignInOne = () => {
   );
 };
 
-export default SignInOne;
+export default SignIn;

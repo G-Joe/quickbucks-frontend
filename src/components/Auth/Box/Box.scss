@@ -1,0 +1,36 @@
+@use "styles/partials/vars";
+@use "styles/partials/colors";
+
+.box-wrapper {
+  height: 70px;
+  border: 1px solid #dcd6e2;
+  border-radius: 5px;
+  padding: 0 33px;
+  margin-bottom: 16px;
+  cursor: pointer;
+
+  &:hover,
+  &--active {
+    border: 1px solid colors.$green_100;
+  }
+
+  .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    &-left {
+      display: flex;
+      gap: 12px;
+
+      p {
+        font-weight: vars.$regular;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        color: colors.$grey_200;
+      }
+    }
+  }
+}
