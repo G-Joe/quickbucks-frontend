@@ -20,6 +20,23 @@
     }
   }
 
+  &-secondary {
+    background-color: colors.$secondaryBlue;
+    color: colors.$white;
+
+    &--outline {
+      background-color: colors.$white;
+      border: 1px solid colors.$secondaryBlue;
+      color: colors.$secondaryBlue;
+
+      &:hover {
+        border: none;
+        background-color: colors.$secondaryBlue;
+        color: colors.$white;
+      }
+    }
+  }
+
   &-disabled {
     background: rgba(0, 0, 0, 0.38);
     color: colors.$white;

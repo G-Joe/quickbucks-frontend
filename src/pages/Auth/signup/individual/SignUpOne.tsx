@@ -26,23 +26,28 @@ const SignUpOne = () => {
           <div className="logo-wrapper">
             <img className="logo-img" src={logoImg} alt="logo-img" />
           </div>
-          <p className="signin-text">
-            Sign in to continue meeting your your urgent needs
-          </p>
+
           <form className="form">
-            <Input label="Username" type="text" />
-            <Input label="Password" type="password" />
-            <Link className="forgot-password" to="/forgot-password">
-              Forgot password?
-            </Link>
-            <Button label="login" to="/!#" variant="primary" />
-            <p className="signup signup-new">
-              New user? &nbsp;
-              <Link className="signup signup-main" to="/signup">
-                Sign Up
-              </Link>
+            <Input label="BVN" type="number" />
+            <Input label="Email" type="email" />
+            <p className="signin-text signin-text--left">
+              Create a password for logging into Quickbucks
             </p>
-            <MobileAppBox />
+            <Input label="Password" type="password" />
+            <Input label="Retype Password" type="password" />
+
+            <div className="row">
+              <Button
+                label="previous"
+                to="/signup"
+                variant="secondary--outline"
+              />
+              <Button
+                label="next"
+                to="/signup/individual/2"
+                variant="primary"
+              />
+            </div>
           </form>
         </div>
       </div>

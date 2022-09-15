@@ -76,13 +76,15 @@
           letter-spacing: 0.1px;
           color: colors.$dark_100;
           margin-bottom: 20px;
+
+          &--left {
+            width: 252px;
+            text-align: left;
+            margin-top: 20px;
+          }
         }
 
         .form {
-          .form-group:first-child {
-            margin-bottom: 10px;
-          }
-
           .forgot-password {
             display: block;
             text-align: left;
@@ -111,6 +113,16 @@
               color: colors.$primaryYellow;
             }
           }
+        }
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+
+        .btn {
+          width: 166px;
+          margin-top: 6px;
         }
       }
     }
