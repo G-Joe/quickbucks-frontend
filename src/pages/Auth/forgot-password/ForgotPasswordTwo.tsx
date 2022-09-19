@@ -29,7 +29,7 @@ const ForgotPasswordTwo = () => {
             <span>+234813*****35</span>
           </p>
           <form className="form">
-            <Input label="OTP" type="password" />
+            <Input label="OTP" type="password" secure />
 
             <Button to="/forgot-password/3" label="submit" variant="primary" />
             <div className="otp-wrapper">

@@ -5,25 +5,36 @@ import "./Input.scss";
 
 type InputProps = {
   label: string;
-  type: string;
+  type: any;
   placeholder?: string;
   toggleVisibility?: () => void;
+  secure?: boolean;
 };
 
 const Input = (props: InputProps) => {
   const [visible, setVisible] = useState(false);
 
-  const { label, type } = props;
+  const { label, type, secure } = props;
 
   const toggleVisibility = () => {
     setVisible(!visible);
+  };
+
+  const setInputType = () => {
+    let inputType = type;
+    if (secure) {
+      if (visible) {
+        inputType = "text";
+      }
+    }
+    return inputType;
   };
 
   return (
     <div className="form-group">
       <label className="capitalize">{label}</label>
       <div className="input-wrapper">
-        {type === "password" && (
+        {secure && (
           <img
             onClick={toggleVisibility}
             className="vector-img"
@@ -31,10 +42,7 @@ const Input = (props: InputProps) => {
             alt="vector-img"
           />
         )}
-        <input
-          {...props}
-          type={type === "password" && visible ? "text" : "password"}
-        />
+        <input {...props} type={setInputType()} />
       </div>
     </div>
   );

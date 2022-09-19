@@ -31,7 +31,7 @@ const SignUpTwo = () => {
               <span>+234813*****35</span> or <br />{" "}
               <span>ero*****@gmail.com</span>
             </p>
-            <Input label="OTP" type="password" />
+            <Input label="OTP" type="password" secure />
 
             <div className="row">
               <Button

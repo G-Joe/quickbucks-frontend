@@ -29,8 +29,8 @@ const SignUpOne = () => {
             <p className="signin-text signin-text--left">
               Create a password for logging into Quickbucks
             </p>
-            <Input label="Password" type="password" />
-            <Input label="Retype Password" type="password" />
+            <Input label="Password" type="password" secure />
+            <Input label="Retype Password" type="password" secure />
 
             <div className="row">
               <Button

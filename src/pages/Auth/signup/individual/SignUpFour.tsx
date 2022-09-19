@@ -28,8 +28,8 @@ const SignUpFour = () => {
               Create a 4-digit PIN for authorising <br /> your transaction each
               time you make <br /> a loan request or make a transaction
             </p>
-            <Input label="PIN" type="password" />
-            <Input label="Retype PIN" type="password" />
+            <Input label="PIN" type="password" secure />
+            <Input label="Retype PIN" type="password" secure />
 
             <div className="row">
               <Button

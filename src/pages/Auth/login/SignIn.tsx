@@ -29,7 +29,7 @@ const SignIn = () => {
           </p>
           <form className="form">
             <Input label="Username" type="text" />
-            <Input label="Password" type="password" />
+            <Input label="Password" type="password" secure />
             <Link className="forgot-password" to="/forgot-password/1">
               Forgot password?
             </Link>

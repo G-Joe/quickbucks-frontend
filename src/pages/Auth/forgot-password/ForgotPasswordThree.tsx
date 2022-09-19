@@ -26,8 +26,8 @@ const ForgotPasswordThree = () => {
             Please create a new password
           </p>
           <form className="form">
-            <Input label="Password" type="password" />
-            <Input label="Retype password" type="password" />
+            <Input label="Password" type="password" secure />
+            <Input label="Retype password" type="password" secure />
 
             <Button to="/login" label="submit" variant="primary" />
           </form>
