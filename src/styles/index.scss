@@ -168,6 +168,7 @@
   align-items: center;
 }
 
+// MODAL START - TO BE MOVED INTO OWN COMPONENT
 .ant-modal-header,
 .ant-modal-footer,
 .ant-modal-close {
@@ -233,7 +234,9 @@
   }
 }
 
-@media (max-width: 501px) {
+// MODAL END
+
+@media (max-width: 500px) {
   .auth-wrapper {
     background: colors.$white;
     padding: 50px 0;
