@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import "antd/dist/antd.min.css";
+import "flag-icons/css/flag-icons.min.css";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
