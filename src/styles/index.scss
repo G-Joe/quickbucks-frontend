@@ -258,6 +258,15 @@
       &-right {
         padding: 0 31px;
         width: 100%;
+
+        .form-wrapper {
+          .form {
+            .row .btn {
+              width: 130px;
+              margin-top: 6px;
+            }
+          }
+        }
       }
     }
   }
