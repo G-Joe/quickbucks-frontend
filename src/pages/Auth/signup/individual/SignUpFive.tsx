@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Modal } from "antd";
 
 import logoImg from "assets/Frame 20.png";
-import flagImg from "assets/Frame 12.svg";
 import rect1Img from "assets/Rectangle 4.svg";
 import rect2Img from "assets/Rectangle 4 copy.svg";
 import tcImg from "assets/images/72431-terms-and-conditions 1.png";
@@ -10,6 +9,7 @@ import Input from "components/shared/Input/Input";
 import LeftPane from "components/Auth/LeftPane/LeftPane";
 import Button from "components/shared/Button/Button";
 import Select from "components/shared/Input/Select";
+import FlagSelect from "components/Auth/FlagSelect/FlagSelect";
 
 const SignUpFive = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,7 +36,7 @@ const SignUpFive = () => {
           <img className="rect-1-img" src={rect1Img} alt="rect-1-img" />
           <img className="rect-2-img" src={rect2Img} alt="rect-2-img" />
           <div className="flag-wrapper">
-            <img className="flag-img" src={flagImg} alt="flag-img" />
+            <FlagSelect />
           </div>
           <div className="form-wrapper">
             <div className="logo-wrapper">

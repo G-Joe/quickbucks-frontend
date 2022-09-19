@@ -1,9 +1,6 @@
-import { ReactElement, useState } from "react";
 import { Link } from "react-router-dom";
 
 import logoImg from "assets/Frame 20.png";
-import dropdownImg from "assets/Vector copy.svg";
-import ngImg from "assets/nigeria.svg";
 import rect1Img from "assets/Rectangle 4.svg";
 import rect2Img from "assets/Rectangle 4 copy.svg";
 import Input from "components/shared/Input/Input";
