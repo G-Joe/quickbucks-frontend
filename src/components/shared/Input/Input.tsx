@@ -1,4 +1,5 @@
 import eyeImg from "assets/Group.svg";
+import eyeHideImg from "assets/eye-hide-svgrepo-com 1.svg";
 import { useState } from "react";
 import "./Input.scss";
 
@@ -26,7 +27,7 @@ const Input = (props: InputProps) => {
           <img
             onClick={toggleVisibility}
             className="vector-img"
-            src={eyeImg}
+            src={visible ? eyeImg : eyeHideImg}
             alt="vector-img"
           />
         )}
