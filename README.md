@@ -11,7 +11,7 @@ Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more
 information.
 
-* Initialization of project
+### Initialization of project
 
 - assets - global static assets such as images, svgs, company logo, etc.
 - components - global shared/reusable components, such as layout (wrappers, navigation), form components, buttons
