@@ -1,17 +1,8 @@
 import { useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-
-import SignIn from "pages/Auth/login/SignIn";
-import SelectCustomerType from "pages/Auth/signup/SelectCustomerType";
-import SignUpOne from "pages/Auth/signup/individual/SignUpOne";
-import SignUpTwo from "pages/Auth/signup/individual/SignUpTwo";
-import SignUpThree from "pages/Auth/signup/individual/SignUpThree";
-import SignUpFour from "pages/Auth/signup/individual/SignUpFour";
-import SignUpFive from "pages/Auth/signup/individual/SignUpFive";
-import ForgotPasswordOne from "pages/Auth/forgot-password/ForgotPasswordOne";
-import ForgotPasswordTwo from "pages/Auth/forgot-password/ForgotPasswordTwo";
-import ForgotPasswordThree from "pages/Auth/forgot-password/ForgotPasswordThree";
+import {SignIn, SelectCustomerType, SignUpOne, SignUpTwo, SignUpThree, SignUpFour, SignUpFive, ForgotPasswordOne, ForgotPasswordTwo, ForgotPasswordThree} from "pages/Auth"
 import "styles/index.scss";
+import Dashboard from "pages/Dashboard";
 
 function App() {
   useEffect(() => {}, []);
@@ -29,6 +20,7 @@ function App() {
         <Route path="/forgot-password/1" element={<ForgotPasswordOne />} />
         <Route path="/forgot-password/2" element={<ForgotPasswordTwo />} />
         <Route path="/forgot-password/3" element={<ForgotPasswordThree />} />
+        <Route path="/home" element={<Dashboard />} />
       </Routes>
     </div>
   );
