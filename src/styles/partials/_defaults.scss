@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: colors.$light_100;
+  background-color: colors.$light_100 !important;
   font-family: vars.$font-family;
 }
 
