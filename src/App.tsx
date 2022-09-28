@@ -1,4 +1,4 @@
-import Layout from "layout";
+import DashboardLayout from "pages/Dashboard/DashboardLayout";
 import AuthRoutes from "navigation/AuthRoutes";
 import DashboardRoutes from "navigation/DashboardRoutes";
 
@@ -7,9 +7,9 @@ function App() {
     <div className="bg-1">
       <AuthRoutes />
 
-      <Layout>
+      <DashboardLayout>
         <DashboardRoutes />
-      </Layout>
+      </DashboardLayout>
     </div>
   );
 }
