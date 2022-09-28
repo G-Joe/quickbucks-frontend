@@ -1,9 +1,12 @@
 import React from "react";
+import Greeting from "../../../components/Dashboard/Home/Greeting"
+import Summary from "../../../components/Dashboard/Home/account-summary"
 
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <Greeting/>
+      <Summary/>
     </div>
   );
 };
