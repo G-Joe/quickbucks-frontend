@@ -1,0 +1,31 @@
+@use "styles/partials/colors";
+
+.sidebar {
+  width: 240px;
+  background-color: colors.$white;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  height: 88vh;
+  padding-top: 38px;
+}
+
+.sidebar .sidebar-menu a {
+  display: block;
+  margin-bottom: 15px;
+  list-style-type: none;
+  color: colors.$grey_400;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  padding: 12px 0px 11px 18px;
+  text-transform: capitalize;
+}
+
+.sidebar .sidebar-menu a:hover,
+.sidebar .sidebar-menu a.active {
+  color: colors.$secondaryBlue;
+  background-color: colors.$blue_100;
+}
+.sidebar .sidebar-menu img {
+  padding-right: 16px;
+}
