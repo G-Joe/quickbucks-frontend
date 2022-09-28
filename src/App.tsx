@@ -1,7 +1,18 @@
 import { useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import {SignIn, SelectCustomerType, SignUpOne, SignUpTwo, SignUpThree, SignUpFour, SignUpFive, ForgotPasswordOne, ForgotPasswordTwo, ForgotPasswordThree} from "pages/Auth"
-import "styles/index.scss";
+import {
+  SignIn,
+  SelectCustomerType,
+  SignUpOne,
+  SignUpTwo,
+  SignUpThree,
+  SignUpFour,
+  SignUpFive,
+  ForgotPasswordOne,
+  ForgotPasswordTwo,
+  ForgotPasswordThree,
+} from "pages/Auth";
+
 import Dashboard from "pages/Dashboard";
 
 function App() {

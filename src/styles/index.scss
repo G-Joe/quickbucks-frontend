@@ -272,7 +272,6 @@
   }
 }
 
-
 .navbar {
   &-wrapper {
     display: flex;
@@ -283,7 +282,6 @@
     background-color: colors.$white;
     border-bottom: 1px solid colors.$grey_300;
   }
-
 
   &-logo img {
     height: 50px;
@@ -340,12 +338,7 @@
       }
     }
   }
-
-
 }
-
-
-
 
 .page-wrapper {
   display: flex;
@@ -355,34 +348,30 @@
     background-color: colors.$white;
     box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
     height: 88vh;
-    padding-top:38px;
+    padding-top: 38px;
   }
-
 
   .sidebar .sidebar-menu li {
-      margin-bottom:15px;
-      list-style-type: none;
-      color: colors.$grey_400;
-      cursor: pointer;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 0.15px;
-      padding: 12px 0px 11px 18px;
+    margin-bottom: 15px;
+    list-style-type: none;
+    color: colors.$grey_400;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    padding: 12px 0px 11px 18px;
   }
 
-  .sidebar .sidebar-menu li:hover{
+  .sidebar .sidebar-menu li:hover {
     color: colors.$secondaryBlue;
     background-color: colors.$blue_100;
-
   }
   .sidebar .sidebar-menu img {
     padding-right: 16px;
-}
+  }
 
-  
   .main {
     padding-top: 33px;
     padding-left: 71px;
   }
 }
-
