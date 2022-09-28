@@ -43,43 +43,43 @@ const Layout = ({ children }: any) => {
                 Home
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/loans">
               <li className="teste">
                 <img src={loanImg} alt="loanImg" />
                 My Loans
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/loan-calculator">
               <li>
                 <img src={calcImg} alt="calcImg" />
                 Loan calculator
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/liquidate">
               <li>
                 <img src={liquidateImg} alt="liquidateImg" />
                 Liquidate
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/support">
               <li>
                 <img src={supportImg} alt="supportImg" />
                 Support
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/settings">
               <li>
                 <img src={settingstImg} alt="settingsImg" />
                 Settings
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/account">
               <li>
                 <img src={accountImg} alt="accountImg" />
                 Account
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/history">
               <li>
                 <img src={historyImg} alt="historyImg" />
                 History
