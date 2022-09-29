@@ -7,7 +7,7 @@ const DashboardLayout = ({ children }: any) => {
       <Navbar />
       <div className="page-wrapper">
         <Sidebar />
-        <div className="main">{children}</div>
+        <div className="layout">{children}</div>
       </div>
     </>
   );

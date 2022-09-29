@@ -1,6 +1,7 @@
 @use "styles/partials/colors";
 
 .navbar {
+  margin-bottom: 98px;
   &-wrapper {
     display: flex;
     justify-content: space-between;
@@ -9,6 +10,10 @@
     height: 98px;
     background-color: colors.$white;
     border-bottom: 1px solid colors.$grey_300;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
   }
 
   &-logo img {

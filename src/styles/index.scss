@@ -274,12 +274,127 @@
 
 .page-wrapper {
   display: flex;
-  width: 100%;
+  overflow: hidden;
 
-  .main {
-    padding-top: 33px;
-    padding-left: 71px;
-    padding-right: 109px;
+  .layout {
+    margin-top: 33px;
+    margin-left: 71px;
     width: 100%;
+  }
+
+  .products-section {
+    margin-top: 30px;
+    position: relative;
+
+    h2 {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      color: colors.$dark_100;
+    }
+
+    .products-wrapper {
+      display: flex;
+      gap: 45px;
+      overflow-x: scroll;
+      padding-right: 360px;
+
+      .product {
+        background: colors.$white;
+        border: 1px solid colors.$blue_200;
+        border-radius: 20px;
+        height: 200px;
+        min-width: 511px;
+        padding: 24px;
+        margin-top: 12px;
+
+        &-top-section {
+          display: flex;
+          justify-content: space-between;
+
+          .left-section {
+            h4 {
+              font-weight: 600;
+              font-size: 24px;
+              line-height: 24px;
+              letter-spacing: 0.18px;
+              color: colors.$secondaryBlue;
+            }
+
+            .amount-main-wrapper {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+              margin-top: 12px;
+
+              .amount-main-status {
+                background-color: colors.$yellow_100;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+              }
+
+              p {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: 0.15px;
+                color: colors.$secondaryBlue;
+              }
+            }
+          }
+        }
+
+        &-bottom-section {
+          p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.15px;
+            color: colors.$grey_200;
+          }
+          .date-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .date {
+              display: flex;
+              align-items: center;
+              gap: 3px;
+
+              &-status {
+                width: 10px;
+                height: 10px;
+                background: colors.$blue_600;
+                border-radius: 1px;
+              }
+
+              p {
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: 0.4px;
+                color: colors.$grey_200;
+
+                b {
+                  color: colors.$dark_100;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.text {
+  &-black {
+    color: colors.$black;
+  }
+  &-yellow {
+    color: colors.$primaryYellow;
   }
 }
