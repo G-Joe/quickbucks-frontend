@@ -274,9 +274,12 @@
 
 .page-wrapper {
   display: flex;
+  width: 100%;
 
   .main {
     padding-top: 33px;
     padding-left: 71px;
+    padding-right: 109px;
+    width: 100%;
   }
 }

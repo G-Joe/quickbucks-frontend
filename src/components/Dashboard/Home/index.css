@@ -1,77 +1,73 @@
-.Greetings{
-    margin: 10px 0 21px 0;
+.Greetings {
+  margin: 10px 0 21px 0;
 }
 
-.username-greeting{
-    font-weight:400;
-    font-size:34px;
-    line-height:36px;
-    margin-bottom:14px;
-    
+.username-greeting {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 36px;
+  margin-bottom: 14px;
 }
 
-.TimeGreeting{
-    line-height:24px;
-    font-size:24px;
-    font-weight:600;
-    letter-spacing: 0.18px;
+.TimeGreeting {
+  line-height: 24px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.18px;
 }
 
-.title{
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.15px;
-    text-transform: capitalize;
-    color: #32496F;
+.title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  text-transform: capitalize;
+  color: #32496f;
 }
 
-.value{
-    font-weight: 600;
-    font-size: 34px;
-    line-height: 36px;
-    color: #32496F;
-    padding-top:10px;
+.value {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 36px;
+  color: #32496f;
+  padding-top: 10px;
 }
-.summary{
-  display:flex;
-}
-
-.summary-box{
-    
-    height: 178px;
-    width: 240px;
-    margin-right: 27px;
-    border-radius: 10px;
-    padding: 54px 0px 54px 24px;
+.summary {
+  display: flex;
+  gap: 27px;
 }
 
-.arrayItem{
-   background-color:  #E9F5FE;
+.summary-box {
+  height: 178px;
+  border-radius: 10px;
+  padding: 54px 0px 54px 24px;
+  width: 100%;
 }
-.arrayItem:hover{
-    border:1px solid #9ED3FD;
+
+.arrayItem {
+  background-color: #e9f5fe;
+}
+.arrayItem:hover {
+  border: 1px solid #9ed3fd;
 }
 
-.arrayItem1{
-    background-color:  #EDF7ED;
- }
- .arrayItem1:hover{
-     border:1px solid #A9F9AC;
-     
- }
+.arrayItem1 {
+  background-color: #edf7ed;
+}
+.arrayItem1:hover {
+  border: 1px solid #a9f9ac;
+}
 
- .arrayItem2{
-    background-color:  #F2E7FE;
- }
- .arrayItem2:hover{
-     border:1px solid#C38EFD;
- }
+.arrayItem2 {
+  background-color: #f2e7fe;
+}
+.arrayItem2:hover {
+  border: 1px solid#C38EFD;
+}
 
- .arrayItem3{
-    background-color: #feeceb;
- }
- .arrayItem3:hover{
-     border:1px solid  #FFB9B4;;
- }
-
+.arrayItem3 {
+  background-color: #feeceb;
+}
+.arrayItem3:hover {
+  border: 1px solid #ffb9b4;
+}
