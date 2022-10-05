@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import {logoImg, rect1Img, rect2Img} from "assets";
+import { logoImg, rect1Img, rect2Img } from "assets";
 import { Button, Input, LeftPane, MobileAppBox, FlagSelect } from "components";
-
-
 
 const SignIn = () => {
   return (
@@ -29,7 +27,7 @@ const SignIn = () => {
             <Link className="forgot-password" to="/forgot-password/1">
               Forgot password?
             </Link>
-            <Button to="/home" label="login" variant="primary" />
+            <Button to="/dashboard/home" label="login" variant="primary" />
             <p className="signup signup-new">
               New user? &nbsp;
               <Link className="signup signup-main" to="/signup">
