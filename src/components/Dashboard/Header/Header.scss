@@ -1,0 +1,36 @@
+@use "styles/partials/colors";
+
+.header {
+  width: 100%;
+  background-color: #fff;
+  height: 83px;
+  box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
+  border-radius: 10px;
+  margin-bottom: 100px;
+  display: flex;
+  gap: 17px;
+  align-items: center;
+  padding: 17px 40px;
+  margin-top: 10px;
+  margin-bottom: 41px;
+
+  h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: capitalize;
+    letter-spacing: 0.18px;
+    color: colors.$secondaryBlue;
+  }
+
+  &-logo-wrapper {
+    background: linear-gradient(36.19deg, #013781 19.15%, #287cee 100.83%);
+    box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
+    border-radius: 4px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,16 +1,12 @@
 import headerLogo from "assets/cash-money.svg";
 import { Input } from "components";
+import Header from "components/Dashboard/Header/Header";
 
 const Loans = () => {
   return (
     <>
       <div className="main-fit">
-        <div className="header">
-          <div className="header-logo-wrapper">
-            <img src={headerLogo} alt="headerLogo" />
-          </div>
-          <h3>My Loans</h3>
-        </div>
+        <Header img={headerLogo} title="My Loans" />
 
         {/* <div className="loan-card">
           <div className="loan-card-contain">

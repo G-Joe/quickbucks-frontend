@@ -15,6 +15,8 @@ import coming2Image from "assets/Vector (2) copy.svg";
 import coming3Image from "assets/Vector (3).svg";
 import coming4Image from "assets/Vector copy 3.svg";
 
+import "./index.scss";
+
 const Home = () => {
   return (
     <>

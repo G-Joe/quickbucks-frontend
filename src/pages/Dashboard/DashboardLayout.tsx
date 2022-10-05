@@ -1,6 +1,8 @@
 import Navbar from "components/Dashboard/Navbar/Navbar";
 import Sidebar from "components/Dashboard/Sidebar/Sidebar";
 
+import "./DashboardLayout.scss";
+
 const DashboardLayout = ({ children }: any) => {
   return (
     <>
