@@ -8,16 +8,28 @@ type ButtonProps = {
   variant?: "primary" | "disabled" | "secondary" | "secondary--outline";
   disabled?: boolean;
   onClick?: () => void;
+  size?: "lg" | "md";
 };
 
 const Button = (props: ButtonProps) => {
-  const { label, type = "submit", to, variant = "disabled", disabled } = props;
+  const {
+    label,
+    type = "submit",
+    to,
+    variant = "disabled",
+    disabled,
+    size = "lg",
+  } = props;
 
   const BTN_BG = disabled ? "disabled" : variant;
 
   return (
     <Link to={to || ""}>
-      <button {...props} type={type} className={`btn btn-${BTN_BG}`}>
+      <button
+        {...props}
+        type={type}
+        className={`btn btn-${size} btn-${BTN_BG} `}
+      >
         {label}
       </button>
     </Link>

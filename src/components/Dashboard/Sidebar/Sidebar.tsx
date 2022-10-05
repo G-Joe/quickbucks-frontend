@@ -5,15 +5,17 @@ import "./Sidebar.scss";
 
 const Sidebar = () => {
   return (
-    <div className="sidebar">
-      <ul className="sidebar-menu">
-        {SidebarItems.map((item) => (
-          <NavLink to={item.path}>
-            <img src={item.icon} alt="sidebarIcon" />
-            {item.title}
-          </NavLink>
-        ))}
-      </ul>
+    <div className="sidebar-wrapper">
+      <div className="sidebar">
+        <ul className="sidebar-menu">
+          {SidebarItems.map((item) => (
+            <NavLink to={item.path}>
+              <img src={item.icon} alt="sidebarIcon" />
+              {item.title}
+            </NavLink>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,76 @@
+.Greetings {
+  margin: 10px 0 21px 0;
+}
+
+.username-greeting {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 36px;
+  margin-bottom: 14px;
+}
+
+.TimeGreeting {
+  line-height: 24px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.18px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  text-transform: capitalize;
+  color: #32496f;
+}
+
+.value {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 36px;
+  color: #32496f;
+  padding-top: 10px;
+}
+
+.summary {
+  display: flex;
+  gap: 27px;
+}
+
+.summary-box {
+  height: 178px;
+  border-radius: 10px;
+  padding: 54px 0px 54px 24px;
+  border: 1px solid transparent;
+  min-width: 249px;
+  width: 100%;
+}
+
+.arrayItem {
+  background-color: #e9f5fe;
+}
+.arrayItem:hover {
+  border: 1px solid #9ed3fd;
+}
+
+.arrayItem1 {
+  background-color: #edf7ed;
+}
+.arrayItem1:hover {
+  border: 1px solid #a9f9ac;
+}
+
+.arrayItem2 {
+  background-color: #f2e7fe;
+}
+.arrayItem2:hover {
+  border: 1px solid#C38EFD;
+}
+
+.arrayItem3 {
+  background-color: #feeceb;
+}
+.arrayItem3:hover {
+  border: 1px solid #ffb9b4;
+}

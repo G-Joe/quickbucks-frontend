@@ -3,13 +3,20 @@
 
 .btn {
   width: 100%;
-  height: 56px;
   border-radius: 4px;
   font-weight: vars.$medium;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.4px;
   text-transform: capitalize;
+
+  &-lg {
+    height: 56px;
+  }
+
+  &-md {
+    height: 31px;
+  }
 
   &-primary {
     background: colors.$primaryYellow;
