@@ -100,6 +100,7 @@ const LoanTab = ({ title, amount, tenor, taken, outstanding }: any) => {
                   label="continue"
                   variant={checked ? "primary" : "disabled"}
                   onClick={modalPin.onOpen}
+                  disabled={!checked}
                 />
               </div>
             </div>
