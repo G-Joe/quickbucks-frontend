@@ -276,18 +276,14 @@
   display: flex;
   overflow: hidden;
   padding-top: 98px;
+  padding-left: 259px;
 
   .layout {
     margin-top: 33px;
-    margin-left: 71px;
     width: 100%;
 
     .main-fit {
-      margin-right: 368px;
-    }
-
-    .main-fluid {
-      width: 100%;
+      padding-right: 109px;
     }
 
     .copyright-wrapper {
@@ -305,7 +301,6 @@
 
   .products-section {
     margin-top: 30px;
-    position: relative;
 
     h2 {
       font-weight: 500;
@@ -319,7 +314,7 @@
       display: flex;
       gap: 45px;
       overflow-x: scroll;
-      padding-right: 360px;
+      padding-right: 109px;
     }
   }
 
@@ -358,7 +353,7 @@
   }
 
   .header {
-    width: 1076px;
+    width: 100%;
     background-color: #fff;
     height: 83px;
     box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
