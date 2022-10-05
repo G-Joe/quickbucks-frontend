@@ -7,7 +7,12 @@ const DashboardLayout = ({ children }: any) => {
       <Navbar />
       <div className="page-wrapper">
         <Sidebar />
-        <div className="layout">{children}</div>
+        <div className="layout">
+          {children}
+          <div className="copyright-wrapper">
+            <p> Copyright © 2022 Quickbucks.</p>
+          </div>
+        </div>
       </div>
     </>
   );

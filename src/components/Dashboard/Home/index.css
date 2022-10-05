@@ -36,8 +36,6 @@
 .summary {
   display: flex;
   gap: 27px;
-  overflow-x: scroll;
-  padding-right: 360px;
 }
 
 .summary-box {
@@ -46,6 +44,7 @@
   padding: 54px 0px 54px 24px;
   border: 1px solid transparent;
   min-width: 249px;
+  width: 100%;
 }
 
 .arrayItem {

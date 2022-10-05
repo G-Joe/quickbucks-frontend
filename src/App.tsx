@@ -4,7 +4,7 @@ import DashboardRoutes from "navigation/DashboardRoutes";
 
 function App() {
   return (
-    <div className="bg-1">
+    <div>
       <AuthRoutes />
 
       <DashboardLayout>
