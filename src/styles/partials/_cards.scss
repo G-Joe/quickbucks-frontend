@@ -1,0 +1,29 @@
+@use "styles/partials/colors";
+
+.card {
+  box-shadow: 0px 10px 15px -3px rgba(17, 12, 46, 0.15);
+  width: fit-content;
+
+  &--xxl {
+    width: 657px;
+    padding: 40px;
+    border-radius: 20px;
+  }
+
+  &--md {
+    width: 394px;
+    border-radius: 5px;
+  }
+
+  &--sm {
+    border-radius: 5px;
+  }
+
+  &--white {
+    background-color: colors.$white;
+  }
+
+  &--blue {
+    background-color: colors.$blue_300;
+  }
+}
