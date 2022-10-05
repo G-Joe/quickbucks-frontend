@@ -1,9 +1,13 @@
-import React from "react";
+import ChangePin from "pages/Auth/change-pin-dashboard/changePin"
+import ChangePassword from "pages/Auth/change-password-dashboard/changePassword"
 
 const Settings = () => {
   return (
     <div>
-      <h1>Settings</h1>
+      <div>
+        <ChangePin/>
+        <ChangePassword/>
+      </div>
     </div>
   );
 };

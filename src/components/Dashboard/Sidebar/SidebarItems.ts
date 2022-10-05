@@ -36,9 +36,16 @@ const SidebarItems =[
     {
         title:"settings",
         path:"/settings",
-        icon: settingstImg
+        icon: settingstImg,
+            submenu:[{
+                title:"change password",
+                path:"/settings"
+            },
+            {
+                title: "change pin",
+                path:"/change-pin"
+            }]
     },
-
     {
         title:"account",
         path:"/account",
