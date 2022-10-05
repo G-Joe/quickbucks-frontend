@@ -1,6 +1,8 @@
+import { Tabs } from "antd";
+
 import headerLogo from "assets/cash-money.svg";
-import { Input } from "components";
 import Header from "components/Dashboard/Header/Header";
+import LoanTab from "./components/LoanTab/LoanTab";
 
 const Loans = () => {
   return (
@@ -8,34 +10,56 @@ const Loans = () => {
       <div className="main-fit">
         <Header img={headerLogo} title="My Loans" />
 
-        {/* <div className="loan-card">
-          <div className="loan-card-contain">
-            <div className="eligible-card">
-              <div className="eligible-card-content">
-                <p>Eligible Amount</p>
-                <h4>N92,000.00</h4>
-              </div>
-              <div className="eligible-card-content">
-                <p>Tenor</p>
-                <h4>N92,000.00</h4>
-              </div>
-            </div>
-
-            <p>Enter amount less than N92,000.00</p>
-
-            <Input label="Amount" type="text" />
-
-            <div className="eligible-card">
-              <div className="content">
-                <p>
-                  Repayment Amount: <br />
-                  (Amount you will need to repay on due)
-                </p>
-                <p>N105,150</p>
-              </div>
-            </div>
-          </div>
-        </div> */}
+        <Tabs
+          defaultActiveKey="1"
+          items={[
+            {
+              label: "Payday Loan",
+              key: "1",
+              children: (
+                <LoanTab
+                  title="Payday Loan"
+                  amount="N92,000.00"
+                  tenor="1 Month"
+                  taken="N60,000"
+                  outstanding="N10,000"
+                />
+              ),
+            },
+            {
+              label: "Salary Advance Loan",
+              key: "2",
+              children: (
+                <LoanTab
+                  title="Payday Loan"
+                  amount="N137,460.00"
+                  tenor="6 Months"
+                  taken="N100,000"
+                  outstanding="N10,000"
+                />
+              ),
+            },
+            {
+              label: "Device Finance Loan",
+              key: "3",
+              children: "Tab 3",
+              disabled: true,
+            },
+            {
+              label: "Small Ticket Personal Loan",
+              key: "4",
+              children: (
+                <LoanTab
+                  title="Small Ticket Personal Loan"
+                  amount="N439,571.00"
+                  tenor="12 Months"
+                  taken="N100,000"
+                  outstanding="N10,000"
+                />
+              ),
+            },
+          ]}
+        ></Tabs>
       </div>
     </>
   );

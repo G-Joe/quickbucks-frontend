@@ -235,6 +235,54 @@
 }
 
 // MODAL END
+.ant-tabs {
+  font-family: "General Sans" !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 24px !important;
+  letter-spacing: 0.3px !important;
+
+  &-top > .ant-tabs-nav::before {
+    border-bottom: 0.5px solid colors.$grey_400 !important;
+  }
+
+  &-nav {
+    margin-bottom: 37px !important;
+  }
+
+  &-tab + .ant-tabs-tab {
+    margin: 0 0 0 95px;
+  }
+
+  &-ink-bar {
+    height: 5px;
+    background: colors.$secondaryBlue !important;
+  }
+
+  &-bar {
+    border-bottom: 1px solid green;
+  }
+
+  &-tab {
+    padding-top: 0 !important;
+
+    &-active {
+      .ant-tabs-tab-btn {
+        color: colors.$secondaryBlue !important;
+      }
+    }
+
+    &-btn {
+      color: colors.$grey_400 !important;
+    }
+
+    &-disabled {
+      .ant-tabs-tab-btn {
+        color: colors.$grey_400 !important;
+      }
+    }
+  }
+}
 
 @media (max-width: 500px) {
   .auth-wrapper {
@@ -278,5 +326,33 @@
   }
   &-yellow {
     color: colors.$primaryYellow;
+  }
+}
+
+.card {
+  box-shadow: 0px 10px 15px -3px rgba(17, 12, 46, 0.15);
+  width: fit-content;
+
+  &--xxl {
+    width: 657px;
+    padding: 40px;
+    border-radius: 20px;
+  }
+
+  &--md {
+    width: 394px;
+    border-radius: 5px;
+  }
+
+  &--sm {
+    border-radius: 5px;
+  }
+
+  &--white {
+    background-color: colors.$white;
+  }
+
+  &--blue {
+    background-color: colors.$blue_300;
   }
 }
