@@ -1,16 +1,15 @@
-import DashboardLayout from "pages/Dashboard/DashboardLayout";
 import AuthRoutes from "navigation/AuthRoutes";
 import DashboardRoutes from "navigation/DashboardRoutes";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="bg-1">
+    <>
       <AuthRoutes />
-
-      <DashboardLayout>
-        <DashboardRoutes />
-      </DashboardLayout>
-    </div>
+      <Routes>
+        <Route path="dashboard/*" element={<DashboardRoutes />} />
+      </Routes>
+    </>
   );
 }
 

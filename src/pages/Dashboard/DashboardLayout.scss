@@ -1,0 +1,28 @@
+.page-wrapper {
+  display: flex;
+  overflow: hidden;
+  padding-top: 98px;
+  padding-left: 259px;
+  height: 100%;
+
+  .layout {
+    margin-top: 33px;
+    width: 100%;
+
+    .main-fit {
+      padding-right: 109px;
+    }
+
+    .copyright-wrapper {
+      padding: 44px 0 30px;
+
+      p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        color: #d1d1d1;
+      }
+    }
+  }
+}

@@ -1,28 +1,36 @@
 import { Progress } from "antd";
 
-import loanBankImg from "assets/Group copy.svg";
+import "./ProductCard.scss";
 
-const ProductCard = () => {
+const ProductCard1 = ({
+  loanType,
+  loanAmount,
+  loanImg,
+  loanTenor,
+  loanRemain,
+  dateTaken,
+  dateDue,
+}: any) => {
   return (
     <div className="product">
       <div className="product-top-section">
         <div className="left-section">
-          <h4>PayDay Loan</h4>
+          <h4>{loanType}</h4>
           <div className="amount-main-wrapper">
             <div className="amount-main-status"></div>
-            <p>N500,000.00</p>
+            <p>{loanAmount}</p>
           </div>
         </div>
         <div className="right-section">
-          <img src={loanBankImg} alt="loanBankImg" />
+          <img src={loanImg} alt="loanBankImg" />
         </div>
       </div>
       <div className="product-bottom-section">
         <p>
-          Your tenor is: <b className="text-black">1 month</b>
+          Your tenor is: <b className="text-black">{loanTenor}</b>
         </p>
         <p>
-          You can still take: <b className="text-yellow">N62,000</b>
+          You can still take: <b className="text-yellow">{loanRemain}</b>
         </p>
         <Progress
           percent={28}
@@ -34,13 +42,13 @@ const ProductCard = () => {
           <div className="date">
             <div className="date-status"></div>
             <p>
-              Date Taken: <b>2/2/2022</b>
+              Date Taken: <b>{dateTaken}</b>
             </p>
           </div>
           <div className="date">
             <div className="date-status"></div>
             <p>
-              Date Due: <b>2/3/2022</b>
+              Date Due: <b>{dateDue}</b>
             </p>
           </div>
         </div>
@@ -49,4 +57,4 @@ const ProductCard = () => {
   );
 };
 
-export default ProductCard;
+export default ProductCard1;

@@ -1,0 +1,55 @@
+@use "styles/partials/vars";
+@use "styles/partials/colors";
+
+.products-section {
+  margin-top: 30px;
+
+  h2 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: colors.$dark_100;
+  }
+
+  .products-wrapper {
+    display: flex;
+    gap: 45px;
+    overflow-x: scroll;
+    padding-right: 109px;
+  }
+}
+
+.home-bg {
+  margin-top: 17px;
+  height: 351px;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.dots-cover {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.coming-wrapper {
+  margin-top: 75px;
+
+  h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: colors.$secondaryBlue;
+  }
+
+  .coming-cover {
+    display: flex;
+    gap: 42px;
+    margin: 16px 0 50px;
+  }
+}

@@ -7,56 +7,48 @@ import settingstImg from "assets/settings-avatar.svg";
 import accountImg from "assets/account-avatar.svg";
 import historyImg from "assets/history-icon.svg";
 
-const SidebarItems =[
-    {
-        title:"home",
-        path:"/home",
-        icon: homeIcon
-    },
-    {
-        title:"my loans",
-        path:"/loans",
-        icon: loanImg
-    },
-    {
-        title:"loan calculator",
-        path:"/loan-calculator",
-        icon: calcImg
-    },
-    {
-        title:"liquidate",
-        path:"/liquidate",
-        icon: liquidateImg
-    },
-    {
-        title:"support",
-        path:"/support",
-        icon: supportImg
-    },
-    {
-        title:"settings",
-        path:"/settings",
-        icon: settingstImg,
-            submenu:[{
-                title:"change password",
-                path:"/settings"
-            },
-            {
-                title: "change pin",
-                path:"/change-pin"
-            }]
-    },
-    {
-        title:"account",
-        path:"/account",
-        icon: accountImg
-    },
-    {
-        title:"history",
-        path:"/history",
-        icon: historyImg
-    },
-]
+const SidebarItems = [
+  {
+    title: "home",
+    path: "/dashboard/home",
+    icon: homeIcon,
+  },
+  {
+    title: "my loans",
+    path: "/dashboard/loans",
+    icon: loanImg,
+  },
+  {
+    title: "loan calculator",
+    path: "/dashboard/loan-calculator",
+    icon: calcImg,
+  },
+  {
+    title: "liquidate",
+    path: "/dashboard/liquidate",
+    icon: liquidateImg,
+  },
+  {
+    title: "support",
+    path: "/dashboard/support",
+    icon: supportImg,
+  },
+  {
+    title: "settings",
+    path: "/dashboard/settings",
+    icon: settingstImg,
+  },
 
- 
-export default SidebarItems
+  {
+    title: "account",
+    path: "/dashboard/account",
+    icon: accountImg,
+  },
+  {
+    title: "history",
+    path: "/dashboard/history",
+    icon: historyImg,
+  },
+];
+
+export default SidebarItems;
