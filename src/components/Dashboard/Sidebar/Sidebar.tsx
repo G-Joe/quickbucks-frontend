@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-
 import SidebarItems from "./SidebarItems";
 import "./Sidebar.scss";
 
@@ -12,6 +11,7 @@ const Sidebar = () => {
             <NavLink to={item.path}>
               <img src={item.icon} alt="sidebarIcon" />
               {item.title}
+              
             </NavLink>
           ))}
         </ul>

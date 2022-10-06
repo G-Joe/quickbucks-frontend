@@ -215,3 +215,39 @@
     color: colors.$primaryYellow;
   }
 }
+
+
+.Settings{
+ margin-right:109px;
+ height: 100vh;
+}
+
+.DashboardTopBar{
+  background-color:#ffffff;
+  box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
+  border-radius: 10px;
+  margin-bottom: 25px;
+  display:flex;
+  padding: 29px 0px 29.81px 40px;
+  gap: 13px;
+}
+
+.form-wrapper{
+  width: 470px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
+}
+
+.form{
+  padding: 48px 14px 61px 14px;
+}
+
+.settingTxt{
+font-weight: 600;
+font-size: 24px;
+letter-spacing: 0.18px;
+height:24px;
+padding-top:5px;
+}
+
