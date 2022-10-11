@@ -144,4 +144,54 @@
       }
     }
   }
+
+  .search {
+    display: flex;
+    align-items: center;
+    height: 55px;
+
+    .dropdown {
+      height: 55px;
+
+      select {
+        height: 55px;
+        width: 131px;
+        background-color: #e4e9f1;
+        border: 1px solid colors.$grey_300;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        padding: 0 16px;
+      }
+    }
+
+    .input-wrapper {
+      display: flex;
+      height: 100%;
+      width: 460px;
+
+      input {
+        width: 100%;
+        border: none;
+        border: 1px solid colors.$grey_300;
+        border-right: none;
+        border-left: none;
+        padding-left: 20px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .search-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: colors.$secondaryBlue;
+        width: 70px;
+        cursor: pointer;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
 }
