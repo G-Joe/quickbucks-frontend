@@ -1,12 +1,9 @@
-import headerLogo from "assets/liquidate-card.svg"
+import headerLogo from "assets/liquidate-card.svg";
 import Header from "components/Dashboard/Header/Header";
-import Table from "pages/Dashboard/Liquidate/table"
+import Table from "pages/Dashboard/Liquidate/table";
 import { Input, Button } from "components";
-import "pages/Dashboard/Liquidate/table.css";
+import "pages/Dashboard/Liquidate/table.scss";
 import { HiFilter, HiSearch } from "react-icons/hi";
-
-
-
 
 const Liquidate = () => {
   return (
@@ -17,22 +14,16 @@ const Liquidate = () => {
       <div className="table-content">
         <div className="search">
           <div className="search-button">
-          <HiFilter/>
-            <Button 
-                label="Filter"
-                variant="secondary--outline"
-              />
+            <HiFilter />
+            <Button label="Filter" variant="secondary--outline" />
           </div>
           <div className="search-box">
-            <HiSearch/>
-            <Input label="" type="search" placeholder="Search by loan type"/>
+            <HiSearch />
+            <Input label="" type="search" placeholder="Search by loan type" />
           </div>
-        
         </div>
-        <Table/>
-       
+        <Table />
       </div>
-
     </>
   );
 };
