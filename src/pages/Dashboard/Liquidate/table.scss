@@ -4,15 +4,7 @@
   tr:nth-child(odd) {
     background-color: #f4f7fcbf;
   }
-
-  .table-content {
-    background-color: #ffffff;
-    margin-right: 109px;
-    border-radius: 8px;
-    padding: 24px 0px 22px 0px;
-    box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
-  }
-
+  
   td,
   th {
     text-align: left;
@@ -43,4 +35,12 @@
 
 .form-group {
   gap: 0px;
+}
+
+.table-content {
+  background-color: #ffffff;
+  margin-right: 109px;
+  border-radius: 8px;
+  padding: 24px 0px 22px 0px;
+  box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
 }

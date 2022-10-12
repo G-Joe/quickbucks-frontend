@@ -2,7 +2,7 @@ import headerLogo from "assets/liquidate-card.svg";
 import Header from "components/Dashboard/Header/Header";
 import Table from "pages/Dashboard/Liquidate/table";
 import { Input, Button } from "components";
-import "pages/Dashboard/Liquidate/table.scss";
+import "./table.scss";
 import { HiFilter, HiSearch } from "react-icons/hi";
 
 const Liquidate = () => {
