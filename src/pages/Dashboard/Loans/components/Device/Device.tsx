@@ -1,8 +1,8 @@
 import "./Device.scss";
 
-const Device = ({ img, name, amount, specs, noStock }: any) => {
+const Device = ({ img, name, amount, specs, noStock, onClick }: any) => {
   return (
-    <div className="device">
+    <div className="device" onClick={onClick}>
       <img src={img} alt="phone3Img" />
       <div className="device-info">
         <h4 className="device-info-header">{name}</h4>
