@@ -5,7 +5,6 @@ import Benefit from "../Benefit/Benefit";
 import { Button, Input } from "components";
 import cancelIcon from "assets/cancel.svg";
 import checkIcon from "assets/checked-success.svg";
-import "./LoanTab.scss";
 import useDisclosure from "components/shared/Modal/useDisclosure";
 
 const LoanTab = ({ title, amount, tenor, taken, outstanding }: any) => {
