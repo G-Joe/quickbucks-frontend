@@ -2,7 +2,9 @@ import { Tabs } from "antd";
 
 import headerLogo from "assets/cash-money.svg";
 import Header from "components/Dashboard/Header/Header";
+import DeviceFinanceTab from "./components/DeviceFinanceTab/DeviceFinanceTab";
 import LoanTab from "./components/LoanTab/LoanTab";
+import "./index.scss";
 
 const Loans = () => {
   return (
@@ -42,8 +44,9 @@ const Loans = () => {
             {
               label: "Device Finance Loan",
               key: "3",
-              children: "Tab 3",
-              disabled: true,
+              children: (
+                <DeviceFinanceTab taken="N70,000" outstanding="N15,000" />
+              ),
             },
             {
               label: "Small Ticket Personal Loan",

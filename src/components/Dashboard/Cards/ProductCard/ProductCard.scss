@@ -47,6 +47,12 @@
       }
     }
 
+    .right-section {
+      img {
+        height: 80px;
+      }
+    }
+
     .left-2-section {
       h4 {
         font-weight: 500;
@@ -109,4 +115,9 @@
       }
     }
   }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
