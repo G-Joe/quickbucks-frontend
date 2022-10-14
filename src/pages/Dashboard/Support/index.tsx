@@ -1,12 +1,12 @@
 import { Tabs, Collapse } from "antd";
 import Header from "components/Dashboard/Header/Header";
-import headerLogo from "assets/cash-money.svg";
+import supportLogo from "assets/support-logo.svg";
 
 const Support = () => {
   return (
     <>
       <div className="main-fit">
-        <Header img={headerLogo} title="Support" />
+        <Header img={supportLogo} title="Support" />
 
         <Tabs
           defaultActiveKey="1"
