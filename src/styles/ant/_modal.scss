@@ -106,6 +106,16 @@
         margin: 0 auto 10px;
       }
 
+      .check-email {
+        text-align: center;
+        width: 206px;
+        margin: 0 auto 20px;
+
+        span {
+          color: colors.$secondaryBlue;
+        }
+      }
+
       .outstanding-box {
         display: flex;
         flex-direction: column;

@@ -1,6 +1,10 @@
 @use "styles/partials/colors";
 
 .loan-calculator {
+  .row {
+    align-items: flex-start;
+  }
+
   .wrapper {
     padding: 30px 0 30px 44px;
     margin-bottom: 24px;
@@ -56,6 +60,66 @@
       border: none;
       border-bottom: 1px solid colors.$grey_300;
       margin-bottom: 28px;
+    }
+  }
+
+  .btn-wrapper {
+    margin-top: 30px;
+    width: 215px;
+  }
+
+  .right-panel {
+    width: 442px;
+
+    h3 {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.15;
+      color: colors.$secondaryBlue;
+    }
+
+    .wrapper {
+      padding: 24px;
+      margin: 23px 0;
+
+      .repayment-details {
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+
+        &-row {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          p {
+            color: colors.$grey_200 !important;
+            font-weight: 400 !important;
+          }
+
+          span {
+            color: colors.$dark_100;
+            font-weight: 500;
+          }
+        }
+
+        p {
+          font-weight: 500;
+          color: colors.$dark_100;
+
+          span {
+            color: colors.$secondaryBlue;
+            font-weight: 600;
+          }
+        }
+
+        hr {
+          border: none;
+          border-bottom: 1px solid colors.$grey_300;
+          margin: 10px 0 20px;
+        }
+      }
     }
   }
 }
