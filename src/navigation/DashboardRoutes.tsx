@@ -17,7 +17,7 @@ const DashboardRoutes = () => {
         <Route path="loans" element={<Loans />} />
         <Route path="loan-calculator" element={<LoanCalculator />} />
         <Route path="liquidate" element={<Liquidate />} />
-        <Route path="support" element={<Support />} />
+        <Route path="support/faq" element={<Support />} />
         <Route path="settings" element={<Settings />} />
         <Route path="account" element={<Account />} />
         <Route path="history" element={<History />} />

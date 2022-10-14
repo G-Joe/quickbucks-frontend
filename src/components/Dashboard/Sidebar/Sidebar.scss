@@ -12,7 +12,9 @@
 }
 
 .sidebar .sidebar-menu a {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 15px;
   list-style-type: none;
   color: colors.$grey_400;
@@ -22,6 +24,29 @@
   letter-spacing: 0.15px;
   padding: 12px 0px 11px 18px;
   text-transform: capitalize;
+
+  &.disabled {
+    pointer-events: painted;
+  }
+}
+
+.sidebar-children {
+  display: flex;
+  flex-direction: column;
+  padding-left: 45px;
+
+  &-item {
+    a {
+      margin-bottom: 0 !important;
+      color: colors.$grey_400 !important;
+
+      &.active,
+      &:hover {
+        color: colors.$secondaryBlue !important;
+        background-color: transparent !important;
+      }
+    }
+  }
 }
 
 .sidebar .sidebar-menu a:hover,
