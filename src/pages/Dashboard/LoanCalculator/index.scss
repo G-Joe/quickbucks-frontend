@@ -104,6 +104,10 @@
           }
         }
 
+        &-row.mb-5 {
+          margin-bottom: 5px;
+        }
+
         p {
           font-weight: 500;
           color: colors.$dark_100;
