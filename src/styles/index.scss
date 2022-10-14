@@ -249,3 +249,29 @@
     padding-top: 5px;
   }
 }
+
+.collapse {
+  background-color: colors.$white;
+  border-radius: 8px;
+  width: 100%;
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 66px;
+  }
+
+  .ant-collapse {
+    &-header {
+      padding-top: 18px !important;
+      padding-bottom: 18px !important;
+
+      &-text {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        color: colors.$grey_200;
+      }
+    }
+  }
+}
