@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Modal } from "antd";
 
-import useDisclosure from "components/shared/Modal/useDisclosure";
 import cancelIcon from "assets/cancel.svg";
 import checkIcon from "assets/checked-success.svg";
 import { Button, Input } from "components";
