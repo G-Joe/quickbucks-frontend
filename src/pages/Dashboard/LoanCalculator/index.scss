@@ -1,0 +1,61 @@
+@use "styles/partials/colors";
+
+.loan-calculator {
+  .wrapper {
+    padding: 30px 0 30px 44px;
+    margin-bottom: 24px;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      p,
+      h4 {
+        color: colors.$secondaryBlue !important;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+      }
+      h4 {
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: 0.18px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .loan-details {
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+
+      p {
+        color: colors.$grey_200;
+      }
+
+      span {
+        color: colors.$dark_100;
+      }
+
+      &:last-child {
+        margin-bottom: 36px;
+      }
+    }
+
+    hr {
+      border: none;
+      border-bottom: 1px solid colors.$grey_300;
+      margin-bottom: 28px;
+    }
+  }
+}
