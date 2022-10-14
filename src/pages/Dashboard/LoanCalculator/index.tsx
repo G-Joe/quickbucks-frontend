@@ -1,6 +1,6 @@
 import { Tabs } from "antd";
 
-import headerLogo from "assets/cash-money.svg";
+import calculatorLogo from "assets/loan-calculator.svg";
 import Header from "components/Dashboard/Header/Header";
 import useDisclosure from "components/shared/Modal/useDisclosure";
 import LoanCalculatorTab from "./components/LoanCalculatorTab";
@@ -17,7 +17,7 @@ const LoanCalculator = () => {
   return (
     <>
       <div className="main-fit">
-        <Header img={headerLogo} title="Loan Calculator" />
+        <Header img={calculatorLogo} title="Loan Calculator" />
 
         <Tabs
           defaultActiveKey="1"
