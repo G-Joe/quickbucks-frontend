@@ -1,6 +1,5 @@
 import Input from "components/shared/Input/Input";
 import Button from "components/shared/Button/Button";
-import SettingsImg from "assets/settings-dashboard.svg";
 import "styles/index.scss";
 
 const ChangePassword = () => {
