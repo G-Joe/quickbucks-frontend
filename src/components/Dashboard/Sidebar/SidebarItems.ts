@@ -32,6 +32,12 @@ const SidebarItems = [
     title: "support",
     path: "/dashboard/support",
     icon: supportImg,
+    children: [
+      {
+        title: "FAQ",
+        path: "/dashboard/support/faq",
+      },
+    ],
   },
   {
     title: "settings",
