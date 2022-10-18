@@ -49,22 +49,22 @@ const SidebarItems = [
     title: "account",
     path: "/dashboard/account",
     icon: accountImg,
-    children:[
+    children: [
       {
         title: "Open Account",
-        path: "/dashboard/support/open-account",
+        path: "/dashboard/account/open-account",
       },
       {
         title: "Debit Card",
-        path: "/dashboard/support/debit-card",
+        path: "/dashboard/account/debit-card",
       },
       {
         title: "My Details",
-        path: "/dashboard/support/my-details",
+        path: "/dashboard/account/my-details",
       },
       {
         title: "Referral Code",
-        path: "/dashboard/support/referral-code",
+        path: "/dashboard/account/referral-code",
       },
     ],
   },

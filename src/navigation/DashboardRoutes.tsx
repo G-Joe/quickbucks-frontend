@@ -5,9 +5,12 @@ import LoanCalculator from "pages/Dashboard/LoanCalculator";
 import Liquidate from "pages/Dashboard/Liquidate";
 import Support from "pages/Dashboard/Support";
 import Settings from "pages/Dashboard/Settings";
-import Account from "pages/Dashboard/Account";
 import History from "pages/Dashboard/History";
 import DashboardLayout from "pages/Dashboard/DashboardLayout";
+import OpenAccount from "pages/Dashboard/Account/pages/OpenAccount";
+import DebitCard from "pages/Dashboard/Account/pages/DebitCard";
+import MyDetails from "pages/Dashboard/Account/pages/MyDetails";
+import ReferralCode from "pages/Dashboard/Account/pages/ReferralCode";
 
 const DashboardRoutes = () => {
   return (
@@ -19,7 +22,10 @@ const DashboardRoutes = () => {
         <Route path="liquidate" element={<Liquidate />} />
         <Route path="support/faq" element={<Support />} />
         <Route path="settings" element={<Settings />} />
-        <Route path="account" element={<Account />} />
+        <Route path="account/open-account" element={<OpenAccount />} />
+        <Route path="account/debit-card" element={<DebitCard />} />
+        <Route path="account/my-details" element={<MyDetails />} />
+        <Route path="account/referral-code" element={<ReferralCode />} />
         <Route path="history" element={<History />} />
       </Routes>
     </DashboardLayout>

@@ -1,7 +1,7 @@
-import accountLogo from "assets/account.svg"
+import accountLogo from "assets/account.svg";
 import Header from "components/Dashboard/Header/Header";
 
-const Account = () => {
+const OpenAccount = () => {
   return (
     <div>
       <div className="main-fit">
@@ -11,6 +11,4 @@ const Account = () => {
   );
 };
 
-
-
-export default Account;
+export default OpenAccount;
