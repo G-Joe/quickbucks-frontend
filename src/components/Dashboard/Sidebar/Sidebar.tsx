@@ -1,52 +1,65 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { NavLink } from "react-router-dom";
 import SidebarItems from "./SidebarItems";
 import dropdownIconImg from "assets/Vector copy 2.svg";
 import "./Sidebar.scss";
 
 const Sidebar = () => {
-  const [showChildren, setShowChildren] = useState(false);
+  const [activeParent, setActiveParent] = useState("");
 
   return (
-    <div className="sidebar-wrapper">
-      <div className="sidebar">
-        <ul className="sidebar-menu">
-          {SidebarItems.map((item) => (
-            <>
-              <NavLink
-                onClick={(e) => {
-                  item.children && setShowChildren(!showChildren);
-                  item.children && e.preventDefault();
-                }}
-                to={item.path}
-              >
-                <div className="first">
-                  <img src={item.icon} alt="sidebarIcon" />
-                  {item.title}
-                </div>
-                {item.children && (
-                  <img src={dropdownIconImg} alt="dropdownIconImg" />
-                )}
-              </NavLink>
-              {showChildren && item.children && (
-                <>
+    <>
+      <div className="sidebar-wrapper">
+        <div className="sidebar">
+          <ul className="sidebar-menu">
+            {SidebarItems.map((item, i) => {
+              return (
+                <Fragment key={i}>
+                  <NavLink
+                    onClick={(e) => {
+                      if (item.path === activeParent) {
+                        setActiveParent("");
+                      } else {
+                        setActiveParent(item.path);
+                      }
+                      item.children && e.preventDefault();
+                    }}
+                    to={item.path}
+                  >
+                    <div className="first">
+                      <img src={item.icon} alt="sidebarIcon" />
+                      {item.title}
+                    </div>
+                    {item.children && (
+                      <img src={dropdownIconImg} alt="dropdownIconImg" />
+                    )}
+                  </NavLink>
                   <div className="sidebar-children">
                     <ul className="sidebar-children-item">
-                      {item.children.map((child_item) => (
-                        <NavLink to={child_item.path}>
-                          {child_item.title}
-                        </NavLink>
-                      ))}
+                      {item.children?.map(
+                        (child_item, j) =>
+                          item.path === activeParent && (
+                            <Fragment key={j}>
+                              <NavLink to={child_item.path}>
+                                {child_item.title}
+                              </NavLink>
+                            </Fragment>
+                          )
+                      )}
                     </ul>
                   </div>
-                </>
-              )}
-            </>
-          ))}
-        </ul>
+                </Fragment>
+              );
+            })}
+          </ul>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
 export default Sidebar;
+
+// item.children?.find((pItem) =>
+//                     pItem.path.includes(item.path)
+//                   ) && setShowChildren(!showChildren);
