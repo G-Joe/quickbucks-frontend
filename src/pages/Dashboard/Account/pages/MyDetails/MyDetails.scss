@@ -1,0 +1,116 @@
+@use "styles/partials/colors";
+
+.my-details {
+  .ant-steps-item-process
+    > .ant-steps-item-container
+    > .ant-steps-item-content
+    > .ant-steps-item-title:after {
+    background-color: #a6a4a8;
+  }
+
+  .ant-steps-item-wait
+    > .ant-steps-item-container
+    > .ant-steps-item-content
+    > .ant-steps-item-title:after {
+    background-color: #a6a4a8;
+  }
+
+  .view-emp.form-card {
+    width: 470px;
+    background: #ffffff;
+    box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
+    border-radius: 10px;
+    padding: 37px 53px 25px;
+    margin-top: 44px;
+
+    .row {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.25px;
+
+      p {
+        color: colors.$grey_200;
+      }
+
+      span {
+        color: colors.$dark_100;
+      }
+    }
+
+    hr.view-emp-hr {
+      margin: 18px 0 34px;
+      border: none;
+      border-bottom: 1px solid colors.$grey_300;
+    }
+  }
+
+  .edit-emp.form-card {
+    background: #ffffff;
+    box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
+    border-radius: 10px;
+    padding: 18px 40px 61px;
+    width: 521px;
+    margin-top: 44px;
+
+    .row {
+      width: 100%;
+      .btn {
+        width: 206px;
+      }
+    }
+  }
+
+  .upload-emp.form-card {
+    margin-top: 44px;
+    background: #ffffff;
+    box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
+    border-radius: 10px;
+    padding: 64px 53px 84px;
+    width: 470px;
+
+    .upload-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 0.0025em;
+        color: colors.$grey_200;
+        margin-bottom: 8px;
+      }
+
+      &-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid colors.$grey_300;
+        border-radius: 4px;
+        height: 56px;
+        position: relative;
+        margin-bottom: 16px;
+        color: colors.$secondaryBlue;
+        cursor: pointer;
+
+        .upload-input {
+          position: absolute;
+          padding: 12px;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .row {
+      width: 100%;
+      .btn {
+        width: 180px;
+      }
+    }
+  }
+}

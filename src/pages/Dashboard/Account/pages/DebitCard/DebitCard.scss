@@ -1,0 +1,51 @@
+.debit-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 300px;
+    margin-top: 58px;
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    text-align: center;
+  }
+
+  .btn-wrapper {
+    margin-top: 27px;
+    width: 366px;
+  }
+}
+
+.debit-card-new {
+  .form-card {
+    width: 519px;
+    background: #ffffff;
+    box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
+    border-radius: 10px;
+    padding: 28px 38px 40px;
+
+    img.debitAddedImg {
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    img.debitAddedSlideImg {
+      width: 102px;
+      margin: 0 auto 20px;
+      display: flex;
+      cursor: pointer;
+    }
+
+    .btn {
+      margin-bottom: 27px;
+    }
+  }
+}
