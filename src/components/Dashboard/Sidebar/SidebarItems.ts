@@ -49,7 +49,7 @@ const SidebarItems = [
     title: "account",
     path: "/dashboard/account",
     icon: accountImg,
-    children:[
+    children: [
       {
         title: "Open Account",
         path: "/dashboard/account/open-account",
