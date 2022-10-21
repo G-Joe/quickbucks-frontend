@@ -10,7 +10,7 @@ import DashboardLayout from "pages/Dashboard/DashboardLayout";
 import OpenAccount from "pages/Dashboard/Account/pages/OpenAccount";
 import DebitCard from "pages/Dashboard/Account/pages/DebitCard/DebitCard";
 import DebitCardNew from "pages/Dashboard/Account/pages/DebitCard/DebitCardNew";
-import MyDetails from "pages/Dashboard/Account/pages/MyDetails";
+import MyDetails from "pages/Dashboard/Account/pages/MyDetails/MyDetails";
 import ReferralCode from "pages/Dashboard/Account/pages/ReferralCode";
 import DebitCardAdded from "pages/Dashboard/Account/pages/DebitCard/DebitCardAdded";
 
