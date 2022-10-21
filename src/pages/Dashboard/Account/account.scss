@@ -1,0 +1,111 @@
+.referral{
+    width: 366px;
+    text-align:center;
+    margin:auto;
+
+   img{
+        margin-bottom:21px;
+        margin-top: 20px;
+   }
+   
+   p{
+    letter-spacing: 0.5px;
+   }
+}
+
+.personal-details{
+     margin-right: 109px;
+    height: 100vh;
+
+  .form-wrapper {
+     width: 470px;
+     background-color: #ffffff;
+     border-radius: 10px;
+     box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
+   }
+ 
+   .form {
+     padding: 48px 57px 61px 21px;
+   }
+ 
+   .settingTxt {
+     font-weight: 600;
+     font-size: 24px;
+     letter-spacing: 0.18px;
+     height: 24px;
+     padding-top: 5px;
+   }
+}
+
+.edit-details{
+     margin-right: 109px;
+    height: 100vh;
+
+  .form-wrapper {
+     width: 470px;
+     background-color: #ffffff;
+     border-radius: 10px;
+     box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
+   }
+ 
+   .form {
+     padding: 18px 54px 61px 52px;
+   }
+ 
+   .settingTxt {
+     font-weight: 600;
+     font-size: 24px;
+     letter-spacing: 0.18px;
+     height: 24px;
+     padding-top: 5px;
+   }
+}
+
+.steps-content{
+     margin-top: 44px;
+}
+
+.steps-action{
+     position: relative;
+ 
+}
+
+.otp-open-account{
+     padding: 73px 53px 73px 53px;
+
+     h3{
+          font-weight: 500;
+          text-align: center;
+          line-height: 24px;
+          letter-spacing: 0.15px;
+          font-size:16px;
+          margin-bottom: 16px;
+     }
+
+     .otp-num{
+          color: #f5821F;
+     }
+
+     p{
+          text-align: center;
+          margin-top:26px;
+     }
+}
+
+.account-buttons{
+        width:100%;
+     .btn{
+          width:48%;
+          margin-right:5px;
+         
+     }
+     
+}
+
+.acc-num{
+     font-size:21px;
+     color:#161616;
+     font-weight:bold;
+     letter-spacing: 1px;
+     line-height: 24px;
+}
