@@ -9,6 +9,7 @@ import devicesImg from "assets/device.svg";
 import ticketsImg from "assets/ticket.svg";
 import loanBankImg from "assets/Group copy.svg";
 import salaryImg from "assets/salary-svgrepo-com 1.svg";
+import cashBackImg from "assets/cash back.svg";
 import homeBgImage from "assets/Screenshot (4) (1).png";
 import coming1Image from "assets/Vector (1) copy.svg";
 import coming2Image from "assets/Vector (2) copy.svg";
@@ -77,6 +78,8 @@ const Home = () => {
               loanRemain="N62,000"
               dateTaken="2/2/2022"
               dateDue="2/3/022"
+              textLine1="Meet your personal"
+              textLine2="needs with loans up to"
             />
             <ProductCard2
               productType="Salary Advance"
@@ -86,6 +89,8 @@ const Home = () => {
               loanRemain="N137,460"
               dateTaken="2/2/2022"
               dateDue="2/3/022"
+              textLine1="Meet your personal"
+              textLine2="needs with loans up to"
             />
             <ProductCard2
               productType="Small Ticket Personal Loan"
@@ -95,6 +100,8 @@ const Home = () => {
               loanRemain="N300,000"
               dateTaken="2/2/2022"
               dateDue="2/5/022"
+              textLine1="Meet your personal"
+              textLine2="needs with loans up to"
             />
             <ProductCard2
               productType="Device Finance"
@@ -104,6 +111,19 @@ const Home = () => {
               loanRemain="N139,000"
               dateTaken="2/2/2022"
               dateDue="2/3/022"
+              textLine1="Meet your personal"
+              textLine2="needs with loans up to"
+            />
+            <ProductCard2
+              productType="Cash backed loan"
+              loanAmount="N112,000.00"
+              loanImg={cashBackImg}
+              loanTenor="1 month"
+              loanRemain="N139,000"
+              dateTaken="2/2/2022"
+              dateDue="2/3/022"
+              textLine1="Meet your personal"
+              textLine2="needs with loans up to"
             />
           </div>
         </div>
