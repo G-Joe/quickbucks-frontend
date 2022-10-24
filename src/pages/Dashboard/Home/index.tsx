@@ -102,6 +102,7 @@ const Home = () => {
               dateDue="2/5/022"
               textLine1="Meet your personal"
               textLine2="needs with loans up to"
+              disabled
             />
             <ProductCard2
               productType="Device Finance"
@@ -124,6 +125,7 @@ const Home = () => {
               dateDue="2/3/022"
               textLine1="Meet your personal"
               textLine2="needs with loans up to"
+              disabled
             />
           </div>
         </div>

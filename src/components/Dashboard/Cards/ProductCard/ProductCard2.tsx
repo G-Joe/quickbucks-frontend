@@ -9,6 +9,7 @@ const ProductCard2 = ({
   loanTenor,
   textLine1,
   textLine2,
+  disabled,
 }: any) => {
   return (
     <div className="product">
@@ -21,7 +22,12 @@ const ProductCard2 = ({
             and repay over <b>{loanTenor}</b>
           </p>
           <div className="btn-wrapper">
-            <Button label="Apply" variant="primary" size="md" />
+            <Button
+              label="Apply"
+              variant="primary"
+              size="md"
+              disabled={disabled}
+            />
           </div>
         </div>
         <div className="right-section">
