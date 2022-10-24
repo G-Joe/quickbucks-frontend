@@ -109,3 +109,15 @@
      letter-spacing: 1px;
      line-height: 24px;
 }
+
+.ant-steps-item-wait>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title:after {
+     background-color: #a6a4a8;
+ }
+
+
+     .ant-steps-item-process
+       > .ant-steps-item-container
+       > .ant-steps-item-content
+       > .ant-steps-item-title:after {
+       background-color: #a6a4a8;
+     }

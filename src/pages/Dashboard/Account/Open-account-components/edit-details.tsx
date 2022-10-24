@@ -17,8 +17,8 @@ const EditDetails = ({next, prev}:any) => {
             <Input label="Residential address" type="text"/>
             <Input label="Place of birth" type="text"/>
             <div className="account-buttons">
-              <Button  to="#" label="Previous" variant="primary" onClick={prev}/>
-              <Button to="#" label="Next" variant="primary" onClick={next}/>
+              <Button label="Previous" variant="primary" onClick={prev}/>
+              <Button label="Next" variant="primary" onClick={next}/>
             </div>
           
            

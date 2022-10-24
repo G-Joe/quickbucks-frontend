@@ -5,9 +5,12 @@ import checkIcon from "assets/checked-success.svg";
 import "../account.scss"
 import { Modal } from "antd";
 import useDisclosure from "components/shared/Modal/useDisclosure";
+import { useState } from "react";
 
 
 const OTP = ({message, prev, OtpSuccess}:any) => {
+  const [otp, setOtp]=useState("")
+
   const modalSuccess = useDisclosure();
     return (
       <>
@@ -18,10 +21,10 @@ const OTP = ({message, prev, OtpSuccess}:any) => {
           your BVN regsitered phone number or email<br/>
                 <span className="otp-num">+234813****35</span> or <span className="otp-num">ero@****@gmail.com</span>
             </h3>
-            <Input label="OTP" type="text"/>
+            <Input label="OTP" type="text" required value={otp} onChange={(e:any)=> setOtp(e.target.value)} />
             <div className="account-buttons">
-              <Button to="#" label="Previous" variant="primary" onClick={prev}/>
-              <Button to="#" label="Submit" variant="primary" onClick={modalSuccess.onOpen}/>
+              <Button  label="Previous" variant="primary" onClick={prev}/>
+              <Button to="" label="Submit" variant="primary" onClick={modalSuccess.onOpen}  />
            </div>
            <p>Didn't get an OTP?<br/>
                 Resend OTP
