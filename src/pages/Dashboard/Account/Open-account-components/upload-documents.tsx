@@ -14,8 +14,8 @@ const Upload = ({next, prev}:any) => {
             <Input label="Government Issued ID" type="text"/>
             <Input label="Proof of address" type="text"/>
             <div className="account-buttons">
-              <Button to="#" label="Previous" variant="primary" onClick={prev}/>
-              <Button to="#" label="Next" variant="primary" onClick={next}/>
+              <Button label="Previous" variant="primary" onClick={prev}/>
+              <Button label="Next" variant="primary" onClick={next}/>
             </div>
           </form>
         </div>

@@ -6,15 +6,21 @@ import EditDetailsB from "./Open-account-components/edit-details-B";
 import Upload from "./Open-account-components/upload-documents";
 import Otp from "./Open-account-components/otp";
 import { Steps} from "antd";
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 
 
-const{Step} = Steps;
+
 
 const OpenAccount = () => {
 
   const [current, setCurrent] = useState(0);
+
+  const{Step} = Steps;
+
+  const onChange = (value: number) => {
+    setCurrent(value);
+  };
 
     const next = () =>{
       setCurrent(current + 1);
@@ -53,7 +59,7 @@ const OpenAccount = () => {
       <div className="main-fit">
         <Header img={accountLogo} title="Accounts" />
         <div className="steps">
-        <Steps current={current} labelPlacement="horizontal" size="small">
+        <Steps current={current} labelPlacement="horizontal" size="small" onChange={onChange}>
           {steps.map(item =>  (
             <Step key={item.title} title={item.title}/>
           ))}

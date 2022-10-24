@@ -11,7 +11,7 @@ const PersonalDits = ({next}:any) => {
             <Input label="BVN" type="text" placeholder="2224451890" />
             <Input label="Email" type="email" placeholder="sol.addy@gmail.com" />
             <Input label="Image" type="button" placeholder="Take a picture"/>
-            <Button to="#" label="Confirm and Continue" variant="primary" onClick={next}/>
+            <Button label="Confirm and Continue" variant="primary" onClick={next}/>
           </form>
         </div>
       </div>
