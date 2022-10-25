@@ -9,6 +9,8 @@ import phone1Img from "assets/image 4 (1).png";
 import phone2Img from "assets/image 4.png";
 import phone3Img from "assets/image_10.png";
 import phone4Img from "assets/image 101.png";
+import phone44Img from "assets/blue_device.png";
+import phone444Img from "assets/pink_device.png";
 import mobile1Img from "assets/image 6.png";
 import mobile2Img from "assets/image 7.png";
 import mobile3Img from "assets/image 8.png";
@@ -26,6 +28,8 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
   const [activeNetwork, setActiveNetwork] = useState(0);
   const [checked, setChecked] = useState(false);
   const [orderPhone, setOrderPhone] = useState(false);
+  const [deviceColor, setDeviceColor] = useState("pink");
+  const [deviceColorActive, setDeviceColorActive] = useState("active");
 
   const modalPay = useDisclosure();
   const modalPin = useDisclosure();
@@ -39,6 +43,10 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
 
   const handleChecked = (e: any, id: any) => {
     setChecked(e.target.checked);
+  };
+
+  const handleColorChange = (color: string) => {
+    setDeviceColor(color);
   };
 
   return (
@@ -160,7 +168,15 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
                   <div className="device-details">
                     <div className="device-details--left">
                       <div className="device-wrapper">
-                        <img src={phone4Img} alt="device-img" />
+                        {deviceColor === "dark_blue" && (
+                          <img src={phone4Img} alt="device-img" />
+                        )}
+                        {deviceColor === "light_blue" && (
+                          <img src={phone44Img} alt="device-img" />
+                        )}
+                        {deviceColor === "pink" && (
+                          <img src={phone444Img} alt="device-img" />
+                        )}
                       </div>
                     </div>
                     <div className="device-details--right">
@@ -173,9 +189,24 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
                     </div>
                   </div>
                   <div className="device-color-row">
-                    <div className="device-color device-color--blue device-color--active"></div>
-                    <div className="device-color device-color--light-blue"></div>
-                    <div className="device-color device-color--pink"></div>
+                    <div
+                      onClick={() => handleColorChange("dark_blue")}
+                      className={`device-color device-color--blue device-color--${
+                        deviceColor === "dark_blue" && `active-${deviceColor}`
+                      }`}
+                    ></div>
+                    <div
+                      onClick={() => handleColorChange("light_blue")}
+                      className={`device-color device-color--light-blue device-color--${
+                        deviceColor === "light_blue" && `active-${deviceColor}`
+                      }`}
+                    ></div>
+                    <div
+                      onClick={() => handleColorChange("pink")}
+                      className={`device-color device-color--pink device-color--${
+                        deviceColor === "pink" && `active-${deviceColor}`
+                      }`}
+                    ></div>
                   </div>
                   <div className="device-specs">
                     <div className="section">
