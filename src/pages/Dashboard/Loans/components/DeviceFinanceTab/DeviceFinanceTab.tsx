@@ -29,7 +29,6 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
   const [checked, setChecked] = useState(false);
   const [orderPhone, setOrderPhone] = useState(false);
   const [deviceColor, setDeviceColor] = useState("pink");
-  const [deviceColorActive, setDeviceColorActive] = useState("active");
 
   const modalPay = useDisclosure();
   const modalPin = useDisclosure();
