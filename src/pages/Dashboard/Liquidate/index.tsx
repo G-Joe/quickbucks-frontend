@@ -14,11 +14,11 @@ const Liquidate = () => {
       <div className="table-content">
         <div className="search">
           <div className="search-button">
-            <HiFilter />
+            <HiFilter  className="search-icon" />
             <Button label="Filter" variant="secondary--outline" />
           </div>
           <div className="search-box">
-            <HiSearch />
+            <HiSearch className="search-icon" />
             <Input label="" type="search" placeholder="Search by loan type" />
           </div>
         </div>

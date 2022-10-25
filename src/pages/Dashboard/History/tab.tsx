@@ -28,23 +28,31 @@ const TabHeader = () => {
         <tr>
             <td><input type="checkbox"/></td>
             <td>3/11/2022</td>
-            <td>Payday loan</td>
+            <td>Salary advance</td>
             <td>N300,000</td>
             <td><button className="reversed">Reversed</button></td>
         </tr>
         <tr>
             <td><input type="checkbox"/></td>
             <td>3/11/2022</td>
-            <td>Payday loan</td>
+            <td>Small ticket loan</td>
             <td>N400,000</td>
             <td><button className="liquidated">Liquidated</button></td>
         </tr>
         <tr>
             <td><input type="checkbox"/></td>
             <td>4/11/2022</td>
-            <td>Payday loan</td>
+            <td>Device finance</td>
             <td>N500,000</td>
             <td><button className="failed">Failed</button></td>
+        </tr>
+        <tr className="head">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Rows per page: 10 <span style={{paddingLeft:20,}}>&#9662;</span></td>
+            <td>1-6 of 6 <span></span> <span></span></td>
+         
         </tr>
         </tbody>
     )

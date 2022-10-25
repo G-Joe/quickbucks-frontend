@@ -1,9 +1,20 @@
-import { Button } from "components";
+import { Button, Input } from "components";
 import { Progress } from "antd";
+import cancelIcon from "assets/cancel.svg";
+import { Modal } from "antd";
+import useDisclosure from "components/shared/Modal/useDisclosure";
 import "./table.scss";
 
 const Table = () => {
+
+
+
+  const modalPin = useDisclosure();
+  const modalPay = useDisclosure();
+  const modalSuccess = useDisclosure();
+
   return (
+    <>
     <div>
       <table className="table">
         <tr>
@@ -32,7 +43,7 @@ const Table = () => {
           </td>
           <td>1 Month</td>
           <td>
-            <Button label="Pay Back" variant="primary" />
+            <Button label="Pay Back" variant="primary" onClick={modalPay.onOpen}/>
           </td>
           <td>View Statement</td>
         </tr>
@@ -52,7 +63,7 @@ const Table = () => {
           </td>
           <td>2 Months</td>
           <td>
-            <Button label="Pay Back" variant="primary" />
+            <Button label="Pay Back" variant="primary" onClick={modalPay.onOpen}/>
           </td>
           <td>View Statement</td>
         </tr>
@@ -72,12 +83,68 @@ const Table = () => {
           </td>
           <td>3 Months</td>
           <td>
-            <Button label="Pay Back" variant="primary" />
+            <Button label="Pay Back" variant="primary" onClick={modalPay.onOpen}/>
           </td>
           <td>View Statement</td>
         </tr>
       </table>
+      
     </div>
+    
+      <Modal
+        open={modalPay.isOpen}
+        onOk={modalPay.onClose}
+        className="payback-modal"
+        centered
+      >
+        <div className="modal-container">
+          <div className="outstanding-box">
+            <p>Loan amount outstanding</p>
+            <b>N239,571.00</b>
+          </div>
+          <Input label="Amount{N}" type="text" />
+          <Button
+            label="Liquidate"
+            variant="primary"
+            onClick={() => {
+              modalPay.onClose();
+              modalPin.onOpen();
+            }}
+          />
+          <img
+            className="close-icon"
+            onClick={modalPay.onClose}
+            src={cancelIcon}
+            alt="cancelIcon"
+          />
+        </div>
+      </Modal>
+      <Modal
+        open={modalPin.isOpen}
+        onOk={modalPin.onClose}
+        className="pin-modal"
+        centered
+      >
+        <div className="modal-container">
+          <h3>Please enter your PIN </h3>
+          <Input label="PIN" type="password" secure />
+          <Button
+            label="Submit"
+            variant="primary"
+            onClick={() => {
+              modalPin.onClose();
+              modalSuccess.onOpen();
+            }}
+          />
+          <img
+            className="close-icon"
+            onClick={modalPin.onClose}
+            src={cancelIcon}
+            alt="cancelIcon"
+          />
+        </div>
+      </Modal>
+    </>
   );
 };
 
