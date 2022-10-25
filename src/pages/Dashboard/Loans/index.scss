@@ -254,8 +254,18 @@
           cursor: pointer;
 
           &--active {
-            border: 3px solid #fff;
-            box-shadow: 0 0 0 1px #00a7ce;
+            &-dark_blue {
+              box-shadow: 0 0 0 1px #00a7ce;
+              border: 3px solid #fff;
+            }
+            &-light_blue {
+              box-shadow: 0 0 0 1px #c7dcf5;
+              border: 3px solid #fff;
+            }
+            &-pink {
+              box-shadow: 0 0 0 1px #f4d1f8;
+              border: 3px solid #fff;
+            }
           }
 
           &--blue {
