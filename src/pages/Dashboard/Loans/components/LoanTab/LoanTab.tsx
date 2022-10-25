@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Modal } from "antd";
-
 import Benefit from "../Benefit/Benefit";
 import { Button, Input } from "components";
 import cancelIcon from "assets/cancel.svg";
 import checkIcon from "assets/checked-success.svg";
 import useDisclosure from "components/shared/Modal/useDisclosure";
+
 
 const LoanTab = ({ title, amount, tenor, taken, outstanding }: any) => {
   const [checked, setChecked] = useState(false);
@@ -13,6 +13,7 @@ const LoanTab = ({ title, amount, tenor, taken, outstanding }: any) => {
   const modalPin = useDisclosure();
   const modalSuccess = useDisclosure();
   const modalPay = useDisclosure();
+  const modalLetter = useDisclosure();
 
   return (
     <>
@@ -73,7 +74,7 @@ const LoanTab = ({ title, amount, tenor, taken, outstanding }: any) => {
                   />
                   <p>
                     I hereby accept the terms and conditions of this letter.{" "}
-                    <span>View offer letter</span>
+                    <span  onClick={modalLetter.onOpen}>View offer letter</span>
                   </p>
                 </div>
               </div>
@@ -200,6 +201,149 @@ const LoanTab = ({ title, amount, tenor, taken, outstanding }: any) => {
             src={cancelIcon}
             alt="cancelIcon"
           />
+        </div>
+      </Modal>
+      <Modal
+        open={modalLetter.isOpen}
+        onOk={modalLetter.onClose}
+        className="letter-modal"
+        centered
+      >
+        <div className="modal-container">
+          <h3>Offer Letter</h3>
+          <div className="modal-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra faucibus pellentesque euismod cum 
+            varius duis.Parturient egestas feugiat sit viverra risus. Id magna et lectus nam. Volutpat viverra id orci at orci pharetra, 
+            consectetur auctor.Magnalaoreet vel arcu facilisis ac. Maecenas ac, urna, eros, sem vitae nam. 
+            Ut vulputate  quis ullamcorper orci, vulputate vel ipsum.Id nec adipiscing sed sit non aliquet donec. 
+            Ornare sapien, at duis </p>
+
+            <table className="offer-letter-table">
+              <tr>
+              <th>S/N</th>
+              <th>Months</th>
+              <th>Beginning balance</th>
+              <th>Interest</th>
+              <th>Principal</th>
+              <th>Ending balance</th>
+              <th>Cummuclative interest</th>
+              <th>RPMT</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Mar-22</td>
+                <td>N585,200.00</td>
+                <td>N6,583.50</td>
+                <td>N45,822.35</td>
+                <td>N529,377.65</td>
+                <td>6,583.500</td>
+                <td>N52,405.85</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Apr-22</td>
+                <td>N539,377.65</td>
+                <td>N6,068.00</td>
+                <td>N46,337.85</td>
+                <td>N493,377.65</td>
+                <td>6,583.500</td>
+                <td>N52,405.85</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>May-22</td>
+                <td>N585,200.00</td>
+                <td>N6,583.50</td>
+                <td>N45,822.35</td>
+                <td>N529,377.65</td>
+                <td>6,583.500</td>
+                <td>N52,405.85</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Jun-22</td>
+                <td>N585,200.00</td>
+                <td>N6,583.50</td>
+                <td>N45,822.35</td>
+                <td>N529,377.65</td>
+                <td>6,583.500</td>
+                <td>N52,405.85</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Jul-22</td>
+                <td>N585,200.00</td>
+                <td>N6,583.50</td>
+                <td>N45,822.35</td>
+                <td>N529,377.65</td>
+                <td>6,583.500</td>
+                <td>N52,405.85</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Aug-22</td>
+                <td>N585,200.00</td>
+                <td>N6,583.50</td>
+                <td>N45,822.35</td>
+                <td>N529,377.65</td>
+                <td>6,583.500</td>
+                <td>N52,405.85</td>
+              </tr>
+            </table>
+
+            <table className="upfront-fee-table">
+             <tr>
+              <th>Upfront Fees</th>
+              <th></th>
+             </tr>
+              <tr>
+                <td>Mgt Fee</td>
+                <td>N5,852</td>
+              </tr>
+              <tr>
+                <td>VAT on Mgt Fee</td>
+                <td>N439</td>
+              </tr>
+              <tr>
+                <td>CLI Fee</td>
+                <td>N5,852</td>
+              </tr>
+              <tr>
+                <td>Total Upfront Fee</td>
+                <td>N12,143</td>
+              </tr>
+              <tr>
+                <td>Total cost to the customer</td>
+                <td>N641,013</td>
+              </tr>
+            </table>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra faucibus pellentesque euismod cum 
+            varius duis.Parturient egestas feugiat sit viverra risus. Id magna et lectus nam. Volutpat viverra id orci at orci pharetra, 
+            consectetur auctor.Magnalaoreet vel arcu facilisis ac. Maecenas ac, urna, eros, sem vitae nam. 
+            Ut vulputate  quis ullamcorper orci, vulputate vel ipsum.Id nec adipiscing sed sit non aliquet donec. 
+            Ornare sapien, at duis </p> <br/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra faucibus pellentesque euismod cum 
+            varius duis.Parturient egestas feugiat sit viverra risus. Id magna et lectus nam. Volutpat viverra id orci at orci pharetra, 
+            consectetur auctor.Magnalaoreet vel arcu facilisis ac. Maecenas ac, urna, eros, sem vitae nam. 
+            Ut vulputate  quis ullamcorper orci, vulputate vel ipsum.Id nec adipiscing sed sit non aliquet donec. 
+            Ornare sapien, at duis </p>
+            
+            
+          <Button
+            label="Download Offer Letter and Send to My Email"
+            variant="primary"
+            onClick={() => {
+              modalLetter.onClose();
+              modalSuccess.onOpen();
+            }}
+          />
+          <img
+            className="close-icon"
+            onClick={modalLetter.onClose}
+            src={cancelIcon}
+            alt="cancelIcon"
+          />
+          </div>
         </div>
       </Modal>
     </>
