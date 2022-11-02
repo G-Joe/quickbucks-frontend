@@ -33,7 +33,7 @@ const Loans = () => {
               key: "2",
               children: (
                 <LoanTab
-                  title="Payday Loan"
+                  title="Salary Advance Loan"
                   amount="N137,460.00"
                   tenor="6 Months"
                   taken="N100,000"
