@@ -2,15 +2,22 @@ import { Fragment, useState } from "react";
 import { NavLink } from "react-router-dom";
 import SidebarItems from "./SidebarItems";
 import dropdownIconImg from "assets/Vector copy 2.svg";
+import cancelImg from "assets/cancel.svg";
 import "./Sidebar.scss";
 
-const Sidebar = () => {
+const Sidebar = ({ menuIcon, handleMenuClick }: any) => {
   const [activeParent, setActiveParent] = useState("");
 
   return (
     <>
       <div className="sidebar-wrapper">
-        <div className="sidebar">
+        <div className={`${menuIcon && `mobile`} sidebar`}>
+          <img
+            onClick={handleMenuClick}
+            className="cancel-img"
+            src={cancelImg}
+            alt="cancelImg"
+          />
           <ul className="sidebar-menu">
             {SidebarItems.map((item, i) => {
               return (
@@ -21,7 +28,9 @@ const Sidebar = () => {
                         setActiveParent("");
                       } else {
                         setActiveParent(item.path);
+                        handleMenuClick();
                       }
+
                       item.children && e.preventDefault();
                     }}
                     to={item.path}
@@ -40,7 +49,10 @@ const Sidebar = () => {
                         (child_item, j) =>
                           item.path === activeParent && (
                             <Fragment key={j}>
-                              <NavLink to={child_item.path}>
+                              <NavLink
+                                onClick={handleMenuClick}
+                                to={child_item.path}
+                              >
                                 {child_item.title}
                               </NavLink>
                             </Fragment>

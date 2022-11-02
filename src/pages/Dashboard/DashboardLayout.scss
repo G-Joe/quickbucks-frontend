@@ -46,3 +46,33 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .page-wrapper {
+    padding: 40px 31px;
+
+    .layout {
+      margin-top: 60px;
+      width: 100%;
+      margin-bottom: 100px;
+
+      .main-fit {
+        padding-right: 0px;
+      }
+    }
+  }
+
+  .footer {
+    padding: 0;
+
+    .copyright-wrapper {
+      padding: 44px 31px 30px;
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+  }
+}

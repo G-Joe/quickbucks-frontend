@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "components/Dashboard/Navbar/Navbar";
 import Sidebar from "components/Dashboard/Sidebar/Sidebar";
 
@@ -9,11 +10,17 @@ import facebookImg from "assets/Frame 2028.png";
 import "./DashboardLayout.scss";
 
 const DashboardLayout = ({ children }: any) => {
+  const [menuIcon, setMenuIcon] = useState(false);
+
+  const handleMenuClick = () => {
+    setMenuIcon(!menuIcon);
+  };
+
   return (
     <>
-      <Navbar />
+      <Navbar handleMenuClick={handleMenuClick} />
       <div className="page-wrapper">
-        <Sidebar />
+        <Sidebar handleMenuClick={handleMenuClick} menuIcon={menuIcon} />
         <div className="layout">{children}</div>
       </div>
       <div className="footer">

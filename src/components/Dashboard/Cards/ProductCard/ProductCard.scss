@@ -121,3 +121,17 @@
   width: 0px;
   background: transparent; /* make scrollbar transparent */
 }
+
+@media (max-width: 500px) {
+  .product {
+    min-width: 367px;
+
+    &-top-section {
+      .right-section {
+        img {
+          height: 35px;
+        }
+      }
+    }
+  }
+}

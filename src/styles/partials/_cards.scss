@@ -1,7 +1,7 @@
 @use "styles/partials/colors";
 
 .card {
-  box-shadow: 0px 10px 15px -3px rgba(17, 12, 46, 0.15);
+  box-shadow: 0px 10px 15px 3px rgba(17, 12, 46, 0.15);
   width: fit-content;
 
   &--xxl {
@@ -41,5 +41,21 @@
 
   &--blue {
     background-color: colors.$blue_300;
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    &--xxl {
+      width: 100%;
+    }
+
+    &--md {
+      width: 100%;
+    }
+
+    &--sm {
+      width: 100%;
+    }
   }
 }
