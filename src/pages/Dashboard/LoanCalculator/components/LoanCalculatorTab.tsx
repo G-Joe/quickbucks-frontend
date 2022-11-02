@@ -21,7 +21,7 @@ const LoanCalculatorTab = ({
     <>
       <div className="loan-calculator">
         <div className="row">
-          <div className="card card--white card--xl">
+          <div className="calc card card--white card--xl">
             <div className="card card--blue card--md">
               <div className="wrapper">
                 <div className="content">
