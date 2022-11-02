@@ -286,7 +286,12 @@
         .section {
           margin-bottom: 20px;
 
-          .heading {
+          .mobile.heading {
+            display: none;
+          }
+
+          .heading,
+          .heading.main {
             font-weight: 400;
             font-size: 20px;
             line-height: 24px;
@@ -635,6 +640,71 @@
 
 @media (max-width: 500px) {
   .my-loans {
+    .dev.card {
+      box-shadow: none;
+
+      &--white {
+        background-color: transparent;
+      }
+    }
+
+    .device-selected {
+      flex-direction: column;
+
+      input,
+      select {
+        background-color: transparent;
+      }
+
+      &--left {
+        width: 100%;
+        padding-top: 0;
+        padding-left: 0;
+
+        .vertical-line {
+          display: none;
+        }
+
+        .device-details {
+          &--left {
+            .device-wrapper {
+              width: 170px;
+              background-color: #fff;
+              img {
+                width: 100%;
+              }
+            }
+          }
+          &--right {
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .device-specs {
+          .section {
+            margin-bottom: 0;
+
+            .heading.main {
+              display: none;
+            }
+
+            .mobile.heading {
+              display: block;
+              cursor: pointer;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+
+      &--right {
+        width: 100%;
+        padding: 0px;
+      }
+    }
+
     .row {
       flex-direction: column-reverse;
       gap: 40px;
@@ -645,6 +715,78 @@
 
           .btn {
             width: 100%;
+          }
+        }
+      }
+
+      .search {
+        width: 100%;
+
+        .dropdown {
+          select {
+            width: 100px;
+            padding: 0 8px;
+          }
+        }
+      }
+
+      .devices {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .device {
+          min-width: 100%;
+        }
+      }
+    }
+
+    .loan-form {
+      width: 100%;
+    }
+
+    .ordered-device {
+      .card {
+        padding: 50px 34px 53px 34px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .my-loans {
+    .device-selected {
+      &--left {
+        .device-details {
+          &--left {
+            .device-wrapper {
+              width: 140px;
+            }
+          }
+        }
+      }
+    }
+    .row {
+      .devices {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .device {
+          display: flex;
+          gap: 30px;
+          height: auto;
+          padding-left: 15px;
+
+          img {
+            height: 112px;
+            margin-top: 10px;
+          }
+
+          .stock-tag {
+            left: 5px;
+            width: fit-content;
           }
         }
       }
