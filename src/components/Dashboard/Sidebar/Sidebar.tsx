@@ -28,7 +28,9 @@ const Sidebar = ({ menuIcon, handleMenuClick }: any) => {
                         setActiveParent("");
                       } else {
                         setActiveParent(item.path);
+                        handleMenuClick();
                       }
+
                       item.children && e.preventDefault();
                     }}
                     to={item.path}
@@ -47,7 +49,10 @@ const Sidebar = ({ menuIcon, handleMenuClick }: any) => {
                         (child_item, j) =>
                           item.path === activeParent && (
                             <Fragment key={j}>
-                              <NavLink to={child_item.path}>
+                              <NavLink
+                                onClick={handleMenuClick}
+                                to={child_item.path}
+                              >
                                 {child_item.title}
                               </NavLink>
                             </Fragment>
