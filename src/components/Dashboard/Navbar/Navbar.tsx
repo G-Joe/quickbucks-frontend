@@ -6,7 +6,7 @@ import notifyImg from "assets/Frame 2114.svg";
 import userImg from "assets/images/The-Cavemen2 1.png";
 import "./Navbar.scss";
 
-const Navbar = () => {
+const Navbar = ({ handleMenuClick }: any) => {
   const [bellIcon, setBellIcon] = useState(false);
 
   return (
@@ -14,7 +14,12 @@ const Navbar = () => {
       <div className="navbar">
         <div className="navbar-wrapper">
           <div className="navbar-logo">
-            <img className="menu" src={menuImg} alt="menuImg" />
+            <img
+              onClick={handleMenuClick}
+              className="menu"
+              src={menuImg}
+              alt="menuImg"
+            />
             <img className="logo" src={logoImg} alt="logoImg" />
           </div>
           <div className="navbar-right">

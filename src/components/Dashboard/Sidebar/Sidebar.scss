@@ -9,6 +9,10 @@
   position: fixed;
   left: 0;
   z-index: 998;
+
+  .cancel-img {
+    display: none;
+  }
 }
 
 .sidebar .sidebar-menu a {
@@ -61,5 +65,21 @@
 @media (max-width: 500px) {
   .sidebar {
     display: none;
+  }
+  .mobile.sidebar {
+    display: block;
+    z-index: 99999;
+    top: 0;
+    width: 100%;
+    padding-top: 60px;
+
+    .cancel-img {
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 25px;
+      width: 20px;
+      cursor: pointer;
+    }
   }
 }
