@@ -103,9 +103,22 @@
     z-index: 999;
   }
 
-  &-logo img {
-    height: 50px;
-    cursor: pointer;
+  &-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .menu {
+      display: none;
+      width: 24px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    .logo {
+      height: 50px;
+      cursor: pointer;
+    }
   }
 
   &-right {
@@ -167,10 +180,24 @@
       padding: 0 33px;
     }
 
-    &-logo img {
-      width: 117px;
-      height: 24px;
-      cursor: pointer;
+    &-menu {
+      display: block;
+
+      img {
+        width: 24px;
+        height: 16px;
+      }
+    }
+
+    &-logo {
+      .menu {
+        display: block;
+      }
+
+      .logo {
+        width: 117px;
+        height: 24px;
+      }
     }
 
     &-right {
