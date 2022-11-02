@@ -159,3 +159,41 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .navbar {
+    &-wrapper {
+      height: 66px;
+      padding: 0 33px;
+    }
+
+    &-logo img {
+      width: 117px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    &-right {
+      width: 166px;
+
+      .notify img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .profile-img {
+        margin-right: 10px;
+        margin-left: 12px;
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      .dropdown {
+        padding: 8px;
+      }
+    }
+  }
+}

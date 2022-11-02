@@ -57,3 +57,9 @@
 .sidebar .sidebar-menu img {
   padding-right: 16px;
 }
+
+@media (max-width: 500px) {
+  .sidebar {
+    display: none;
+  }
+}
