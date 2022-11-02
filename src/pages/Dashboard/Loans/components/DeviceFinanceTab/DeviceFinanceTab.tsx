@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Modal } from "antd";
 
 import searchLogo from "assets/Vector copy 4.svg";
@@ -29,12 +29,32 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
   const [checked, setChecked] = useState(false);
   const [orderPhone, setOrderPhone] = useState(false);
   const [deviceColor, setDeviceColor] = useState("pink");
+  const [viewDevice, setViewDevice] = useState(false);
 
   const modalPay = useDisclosure();
   const modalPin = useDisclosure();
   const modalSuccess = useDisclosure();
   const modalSummary = useDisclosure();
   const modalConfirm = useDisclosure();
+
+  const getWindowSize = () => {
+    const { innerWidth, innerHeight } = window;
+    return { innerWidth, innerHeight };
+  };
+
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize(getWindowSize());
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   const handleDeviceClicked = () => {
     setShowDeviceFinanceLanding(false);
@@ -48,8 +68,15 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
     setDeviceColor(color);
   };
 
+  const toggleViewDevice = () => {
+    setViewDevice(!viewDevice);
+  };
+
+  const checkMaxWidth = () => windowSize.innerWidth > 500;
+
   return (
     <>
+      {console.log(22, checkMaxWidth())}
       <div className="my-loans">
         {showDeviceFinanceLanding && !showDeviceOrdered ? (
           <>
@@ -161,7 +188,7 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
           </>
         ) : (
           !showDeviceOrdered && (
-            <div className="card card--white card--full">
+            <div className="dev card card--white card--full">
               <div className="device-selected">
                 <div className="device-selected--left">
                   <div className="device-details">
@@ -209,59 +236,80 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
                   </div>
                   <div className="device-specs">
                     <div className="section">
-                      <h3 className="heading">Device details</h3>
-                      <ul>
-                        <li>-3G/4G LTE Network</li>
-                        <li>-143.6 x 70.9 x 7.7mm (5.56 x 2.79 x 0.30 in)</li>
-                        <li>-Front/back glass, stainless steel frame build</li>
-                        <li>-Nano-SIM and e-SIM</li>
-                        <li>
-                          -IP68 dust/water resistant (up to 2m for 30 mins)
-                        </li>
-                        <li>-Apply Pay (Visa, MaterCard, Amex certified)</li>
-                        <li>
-                          -Super AMOLED capacitive touchscreen, 16M colors
-                        </li>
-                      </ul>
+                      <h3 className="heading main">Device details</h3>
+                      <h3 onClick={toggleViewDevice} className="mobile heading">
+                        View {viewDevice ? `Less` : `Device details`}
+                      </h3>
+                      {(viewDevice || checkMaxWidth()) && (
+                        <>
+                          <ul>
+                            <li>-3G/4G LTE Network</li>
+                            <li>
+                              -143.6 x 70.9 x 7.7mm (5.56 x 2.79 x 0.30 in)
+                            </li>
+                            <li>
+                              -Front/back glass, stainless steel frame build
+                            </li>
+                            <li>-Nano-SIM and e-SIM</li>
+                            <li>
+                              -IP68 dust/water resistant (up to 2m for 30 mins)
+                            </li>
+                            <li>
+                              -Apply Pay (Visa, MaterCard, Amex certified)
+                            </li>
+                            <li>
+                              -Super AMOLED capacitive touchscreen, 16M colors
+                            </li>
+                          </ul>
+                        </>
+                      )}
                     </div>
-                    <div className="section">
-                      <h3 className="heading">Type</h3>
-                      <ul>
-                        <li>
-                          -5.8 inches, 84.4 cm2 (-82.9% screen-to body ratio)
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="section">
-                      <h3 className="heading">Size</h3>
-                      <ul>
-                        <li>
-                          -1125 x 2436 pixels, 19.5:9 ratio (-458 ppi density)
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="section">
-                      <h3 className="heading">Resolution</h3>
-                      <ul>
-                        <li>-Scratch-resistant glass, oleophobic coating</li>
-                      </ul>
-                    </div>
-                    <div className="section">
-                      <h3 className="heading">Protection</h3>
-                      <ul>
-                        <li>-Dolby Vision/HDR10 Compliant</li>
-                        <li>-Wide color gamut diplay</li>
-                        <li>-3D Touch Display</li>
-                        <li>-True-tone display</li>
-                        <li>-120Hz touch-sensing</li>
-                        <li>-iOS 12 Operating System</li>
-                        <li>-Apple A12 Bionic Chipset</li>
-                        <li>-Hexa-core Processor</li>
-                        <li>-64 GB, 4GB RAM</li>
-                        <li>-12 MP, f/1.8, 28mm, 1.4um, OIS, PDAF</li>
-                        <li>-PDAF 2x optical zoom Dual Camera</li>
-                      </ul>
-                    </div>
+                    {(viewDevice || checkMaxWidth()) && (
+                      <>
+                        <div className="section">
+                          <h3 className="heading">Type</h3>
+                          <ul>
+                            <li>
+                              -5.8 inches, 84.4 cm2 (-82.9% screen-to body
+                              ratio)
+                            </li>
+                          </ul>
+                        </div>
+                        <div className="section">
+                          <h3 className="heading">Size</h3>
+                          <ul>
+                            <li>
+                              -1125 x 2436 pixels, 19.5:9 ratio (-458 ppi
+                              density)
+                            </li>
+                          </ul>
+                        </div>
+                        <div className="section">
+                          <h3 className="heading">Resolution</h3>
+                          <ul>
+                            <li>
+                              -Scratch-resistant glass, oleophobic coating
+                            </li>
+                          </ul>
+                        </div>
+                        <div className="section">
+                          <h3 className="heading">Protection</h3>
+                          <ul>
+                            <li>-Dolby Vision/HDR10 Compliant</li>
+                            <li>-Wide color gamut diplay</li>
+                            <li>-3D Touch Display</li>
+                            <li>-True-tone display</li>
+                            <li>-120Hz touch-sensing</li>
+                            <li>-iOS 12 Operating System</li>
+                            <li>-Apple A12 Bionic Chipset</li>
+                            <li>-Hexa-core Processor</li>
+                            <li>-64 GB, 4GB RAM</li>
+                            <li>-12 MP, f/1.8, 28mm, 1.4um, OIS, PDAF</li>
+                            <li>-PDAF 2x optical zoom Dual Camera</li>
+                          </ul>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
                 <div className="vertical-line"></div>
