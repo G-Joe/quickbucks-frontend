@@ -634,4 +634,20 @@
 }
 
 @media (max-width: 500px) {
+  .my-loans {
+    .row {
+      flex-direction: column-reverse;
+      gap: 40px;
+
+      .card {
+        .pay-back {
+          padding-right: 20px;
+
+          .btn {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
