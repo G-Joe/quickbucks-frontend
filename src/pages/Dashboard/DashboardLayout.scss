@@ -50,6 +50,16 @@
 @media (max-width: 500px) {
   .page-wrapper {
     padding: 40px 31px;
+
+    .layout {
+      margin-top: 60px;
+      width: 100%;
+      margin-bottom: 100px;
+
+      .main-fit {
+        padding-right: 0px;
+      }
+    }
   }
 
   .footer {
