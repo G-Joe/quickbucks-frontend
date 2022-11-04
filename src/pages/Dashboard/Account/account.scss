@@ -121,3 +121,26 @@
        > .ant-steps-item-title:after {
        background-color: #a6a4a8;
      }
+
+
+     @media (max-width: 500px) {
+
+          .personal-details{
+               .form-wrapper{
+                    width:430px;
+               }
+          }
+          .edit-details{
+               .form-wrapper{
+                    width:430px;
+               }
+             
+          }
+          .ant-steps-vertical{
+               flex-direction: row;
+               overflow: scroll;
+          }
+          .ant-steps-item-tail:after{
+               display:none;
+          }
+        }    
