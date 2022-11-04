@@ -9,15 +9,16 @@ type InputProps = {
   placeholder?: string;
   toggleVisibility?: () => void;
   secure?: boolean;
-  required?:boolean
-value?:string
-onChange?:any
+  required?: boolean;
+  value?: string;
+  onChange?: any;
+  style?: any;
 };
 
 const Input = (props: InputProps) => {
   const [visible, setVisible] = useState(false);
 
-  const { label, type, secure,required, value, onChange } = props;
+  const { label, type, secure, required, value, onChange, style } = props;
 
   const toggleVisibility = () => {
     setVisible(!visible);
@@ -45,7 +46,13 @@ const Input = (props: InputProps) => {
             alt="vector-img"
           />
         )}
-        <input {...props} type={setInputType()} required={required} value={value} onChange={onChange} />
+        <input
+          {...props}
+          type={setInputType()}
+          required={required}
+          value={value}
+          onChange={onChange}
+        />
       </div>
     </div>
   );
