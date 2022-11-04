@@ -4,7 +4,7 @@ import uploadIconImg from "assets/upload_icon.svg";
 
 import "../pages/MyDetails/MyDetails.scss";
 
-const Upload = ({next, prev}:any) => {
+const Upload = ({ next, prev }: any) => {
   return (
     <>
       <div className="upload-emp form-card">
@@ -49,17 +49,16 @@ const Upload = ({next, prev}:any) => {
           </div>
         </div>
         <div className="account-buttons">
-              <Button label="Previous" variant="primary" onClick={prev}/>
-              <Button label="Next" variant="primary" onClick={next}/>
-            </div>
-        
+          <Button
+            label="Previous"
+            variant="secondary--outline"
+            onClick={prev}
+          />
+          <Button label="Next" variant="primary" onClick={next} />
+        </div>
       </div>
-
     </>
   );
-  };
-  
-
-
+};
 
 export default Upload;
