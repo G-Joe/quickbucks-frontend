@@ -31,56 +31,58 @@
     }
   }
 
-  .upload-emp.form-card {
-    margin-top: 44px;
-    background: #ffffff;
-    box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
-    border-radius: 10px;
-    padding: 64px 53px 84px;
-    width: 470px;
 
-    .upload-group {
-      display: flex;
-      flex-direction: column;
+}
 
-      label {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 19px;
-        letter-spacing: 0.0025em;
-        color: colors.$grey_200;
-        margin-bottom: 8px;
-      }
+.upload-emp.form-card {
+  margin-top: 44px;
+  background: #ffffff;
+  box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
+  border-radius: 10px;
+  padding: 64px 53px 84px;
+  width: 470px;
 
-      &-box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        border: 1px solid colors.$grey_300;
-        border-radius: 4px;
-        height: 56px;
-        position: relative;
-        margin-bottom: 16px;
-        color: colors.$secondaryBlue;
-        cursor: pointer;
+  .upload-group {
+    display: flex;
+    flex-direction: column;
 
-        .upload-input {
-          position: absolute;
-          padding: 12px;
-          height: 100%;
-          width: 100%;
-          opacity: 0;
-          cursor: pointer;
-        }
-      }
+    label {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: 0.0025em;
+      color: colors.$grey_200;
+      margin-bottom: 8px;
     }
 
-    .row {
-      width: 100%;
-      .btn {
-        width: 180px;
+    &-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid colors.$grey_300;
+      border-radius: 4px;
+      height: 56px;
+      position: relative;
+      margin-bottom: 16px;
+      color: colors.$secondaryBlue;
+      cursor: pointer;
+
+      .upload-input {
+        position: absolute;
+        padding: 12px;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        cursor: pointer;
       }
+    }
+  }
+
+  .row {
+    width: 100%;
+    .btn {
+      width: 180px;
     }
   }
 }

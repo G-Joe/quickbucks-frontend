@@ -49,9 +49,9 @@ const TabHeader = () => {
         <tr className="head">
             <td></td>
             <td></td>
-            <td></td>
             <td>Rows per page: 10 <span style={{paddingLeft:20,}}>&#9662;</span></td>
-            <td>1-6 of 6 <span></span> <span></span></td>
+            <td>1-6 of 6</td>
+            <td> <span style={{paddingRight:30,}}>&lt;</span><span>	&gt; </span></td>
          
         </tr>
         </tbody>
