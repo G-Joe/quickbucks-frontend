@@ -1,4 +1,299 @@
+@use "styles/partials/colors";
+
+.dev-finance {
+  .search {
+    position: relative;
+
+    &-icon {
+      position: absolute;
+      left: 18px;
+      top: 20.5px;
+
+      img {
+        width: 16px;
+      }
+    }
+
+    input {
+      background-color: transparent;
+      position: absolute;
+      padding-left: 38px;
+    }
+
+    .filter-icon {
+      position: absolute;
+      width: 56px;
+      height: 54px;
+
+      background-color: colors.$light_300;
+      border-bottom-right-radius: 4px;
+      border-top-right-radius: 4px;
+      top: 9px;
+      right: 1px;
+      cursor: pointer;
+
+      img {
+        position: absolute;
+        width: 24px;
+        top: 30%;
+        left: 30%;
+      }
+    }
+  }
+
+  .grid-row {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 32px;
+    width: 100%;
+
+    .device {
+      background-color: colors.$light_200;
+      width: 190px;
+      border: 1px solid #eff2ff;
+      border-radius: 4px;
+      padding: 28px 25px 30px 11px;
+      cursor: pointer;
+
+      img {
+        margin-bottom: 8px;
+        height: 115px;
+      }
+
+      &-title,
+      &-trans-id {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.25px;
+        color: colors.$grey_200;
+      }
+
+      &-trans-id {
+        margin: 9px 0;
+        color: colors.$secondaryBlue;
+
+        span {
+          font-weight: 500;
+        }
+      }
+
+      .device-bg {
+        text-align: center;
+        height: 27px;
+        vertical-align: middle;
+        font-weight: 500;
+
+        &.blue {
+          background: rgba(0, 125, 255, 0.08);
+          color: #0b79d0;
+        }
+
+        &.yellow {
+          background: linear-gradient(
+              0deg,
+              rgba(255, 255, 255, 0.9),
+              rgba(255, 255, 255, 0.9)
+            ),
+            #ff9800;
+          color: #c77700;
+        }
+
+        &.green {
+          background: linear-gradient(
+              0deg,
+              rgba(255, 255, 255, 0.9),
+              rgba(255, 255, 255, 0.9)
+            ),
+            #4caf50;
+          color: #7bc67e;
+        }
+
+        &.red {
+          background: linear-gradient(
+              0deg,
+              rgba(255, 255, 255, 0.9),
+              rgba(255, 255, 255, 0.9)
+            ),
+            #f44336;
+          color: #e31b0c;
+        }
+
+        &.grey {
+          background: #eeeeee;
+          color: #757575;
+        }
+      }
+    }
+  }
+
+  .ordered-device {
+    .card {
+      padding: 50px 72px 53px 34px;
+      box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
+      border-radius: 20px;
+      width: 473px;
+    }
+
+    .device-details {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 21px;
+
+      .device-wrapper {
+        background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 0.9)
+          ),
+          #2d3032;
+        border-radius: 10px;
+        padding: 10px;
+
+        img {
+          width: 79px;
+          height: 102px;
+        }
+      }
+
+      .device-info {
+        margin: auto 0;
+
+        h4 {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0.15px;
+          color: colors.$dark_100;
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          letter-spacing: 0.1px;
+          color: colors.$grey_200;
+        }
+
+        .view-details {
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 1.25px;
+          color: colors.$secondaryBlue;
+          font-weight: 500;
+          margin-top: 12px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .outstanding-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      width: 100%;
+      background-color: colors.$red_100;
+      color: colors.$red_400;
+      margin: 27px 0;
+      padding: 19px 16px 16px 16px;
+      border-radius: 10px;
+
+      &-row {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.25px;
+      }
+      b {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .device-summary-col {
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.1px;
+      margin-bottom: 16px;
+      font-weight: 400;
+
+      p {
+        color: colors.$grey_200;
+      }
+
+      span {
+        color: colors.$dark_100;
+      }
+    }
+
+    .pay-plan-row {
+      font-weight: 400;
+    }
+
+    .pay-plan {
+      padding: 16px 25px;
+      width: 100%;
+
+      &.card {
+        background: #eff2ff;
+        border-radius: 10px;
+      }
+
+      hr {
+        border: none;
+        border-bottom: 1px solid colors.$grey_300;
+      }
+
+      &-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 10px 0 20px;
+        font-weight: 400;
+
+        p {
+          color: colors.$grey_200;
+        }
+
+        span {
+          font-weight: 500;
+          color: colors.$dark_100;
+        }
+      }
+    }
+
+    .req-date {
+      margin: 16px 0;
+    }
+
+    .cancel-tranx {
+      text-align: center;
+      margin-top: 20px;
+
+      p {
+        color: #df4b2d;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 .tab-content {
+  width: 100%;
   background-color: #ffffff;
   margin-right: 109px;
   border-radius: 8px;
@@ -8,35 +303,34 @@
     width: 88px;
     position: relative;
 
-    button{
+    button {
       padding-left: 25px;
     }
-
   }
 
-  .filter-icon{
+  .filter-icon {
     position: absolute;
     z-index: 22;
     font-size: 20px;
     top: 18px;
     left: 10px;
-    color:#8B83BA;
+    color: #8b83ba;
   }
 
-  .search-icon{
+  .search-icon {
     position: absolute;
     z-index: 22;
     font-size: 20px;
     top: 25px;
     left: 10px;
-    color:#8B83BA;
+    color: #8b83ba;
   }
   .search-box {
     width: 392px;
-    position: relative; 
+    position: relative;
   }
 
-  .search-box .form-group{
+  .search-box .form-group {
     margin-bottom: 9px;
   }
 
@@ -110,5 +404,16 @@
     border: 1px solid #feeceb;
     padding: 3px 6px 3px 6px;
     border-radius: 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .dev-finance {
+    .ordered-device {
+      .card {
+        padding: 50px 34px 53px 34px;
+        width: 100%;
+      }
+    }
   }
 }
