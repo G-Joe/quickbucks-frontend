@@ -205,6 +205,10 @@
         flex-direction: row;
       }
 
+      .outstand {
+        font-weight: 400;
+      }
+
       p {
         font-weight: 600;
         font-size: 16px;
@@ -275,6 +279,10 @@
 
     .req-date {
       margin: 16px 0;
+    }
+
+    .mb-10 {
+      margin-bottom: 30px !important;
     }
   }
 }

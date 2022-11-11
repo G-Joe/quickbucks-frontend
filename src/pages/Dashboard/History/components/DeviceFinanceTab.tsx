@@ -8,6 +8,7 @@ import phone2Img from "assets/image 4.png";
 import phone3Img from "assets/image_10.png";
 import Device from "./Device";
 import PendingPickup from "./DeviceStatuses/PendingPickup";
+import Outstanding from "./DeviceStatuses/Outstanding";
 
 const DeviceFinanceTab = () => {
   const [deviceStatusPage, setDeviceStatusPage] = useState("");
@@ -20,6 +21,12 @@ const DeviceFinanceTab = () => {
     const statuses: any = {
       pending_pickup: (
         <PendingPickup
+          img={phone1Img}
+          setDeviceStatusPage={setDeviceStatusPage}
+        />
+      ),
+      outstanding: (
+        <Outstanding
           img={phone1Img}
           setDeviceStatusPage={setDeviceStatusPage}
         />
