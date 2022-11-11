@@ -1,14 +1,19 @@
 import { Modal } from "antd";
 import useDisclosure from "components/shared/Modal/useDisclosure";
 
+import checkIcon from "assets/checked-success.svg";
 import cancelIcon from "assets/cancel.svg";
 import checkFailedIcon from "assets/check-failed.svg";
 import { Button, Input } from "components";
 import Select from "components/shared/Input/Select";
 
 const Outstanding = ({ img, setDeviceStatusPage }: any) => {
+  const modalPin = useDisclosure();
+  const modalSuccess = useDisclosure();
   const modalCancel = useDisclosure();
   const modalCancelSuccess = useDisclosure();
+  const modalLiquidate = useDisclosure();
+
   return (
     <>
       <div className="ordered-device">
@@ -39,13 +44,120 @@ const Outstanding = ({ img, setDeviceStatusPage }: any) => {
             </option>
           </Select>
           <div className="mb-10" />
-          <Button label="Self Liquidate" variant="primary" />
+          <Button
+            label="Self Liquidate"
+            variant="primary"
+            onClick={modalLiquidate.onOpen}
+          />
 
           <div className="cancel-tranx" onClick={modalCancel.onOpen}>
             <p>Cancel Transaction</p>
           </div>
         </div>
       </div>
+      <Modal
+        open={modalPin.isOpen}
+        onOk={modalPin.onClose}
+        className="pin-modal"
+        centered
+      >
+        <div className="modal-container">
+          <h3>Please enter your PIN </h3>
+          <Input label="PIN" type="password" secure />
+          <Button
+            label="Submit"
+            variant="primary"
+            onClick={() => {
+              modalPin.onClose();
+              modalSuccess.onOpen();
+            }}
+          />
+          <img
+            className="close-icon"
+            onClick={modalPin.onClose}
+            src={cancelIcon}
+            alt="cancelIcon"
+          />
+        </div>
+      </Modal>
+      <Modal
+        open={modalSuccess.isOpen}
+        onOk={modalSuccess.onClose}
+        className="success-modal"
+        centered
+      >
+        <div className="modal-container">
+          <img className="check-icon" src={checkIcon} alt="checkIcon" />
+          <h3>Liquidation was Successful </h3>
+          <Button
+            label="Go Home"
+            variant="primary"
+            onClick={() => {
+              modalSuccess.onClose();
+            }}
+            to="/dashboard/home"
+          />
+          <img
+            className="close-icon"
+            onClick={modalSuccess.onClose}
+            src={cancelIcon}
+            alt="cancelIcon"
+          />
+        </div>
+      </Modal>
+      <Modal
+        open={modalLiquidate.isOpen}
+        onOk={modalLiquidate.onClose}
+        className="liquidate-modal"
+        centered
+      >
+        <div className="modal-container">
+          <div className="liq-row">
+            <div className="left">
+              <p>Device Finance</p>
+              <b>N250,000</b>
+            </div>
+            <div className="right">
+              <p>Samsung S7</p>
+              <b>Trans ID: 216746</b>
+              <p className="text-blue">Active</p>
+            </div>
+          </div>
+          <div className="outstanding-box">
+            <p className="outstand">Loan Amount Outstanding</p>
+            <p className="outstand">N239,571.00</p>
+          </div>
+          <div className="liq-pay">
+            <p>You are about to pay</p>
+            <h2>N100,000</h2>
+          </div>
+          <div className="liq-from">
+            <p>From</p>
+            <div className="liq-from-card">
+              <p>Current account - 88300337</p>
+              <p>GAFAR POPOOLA</p>
+              <b>N450,000.00</b>
+            </div>
+          </div>
+          <Button
+            label="Self Liquidate"
+            variant="primary"
+            onClick={() => {
+              modalLiquidate.onClose();
+              modalPin.onOpen();
+            }}
+          />
+          <div className="cancel-tranx" onClick={modalLiquidate.onClose}>
+            <p>Cancel</p>
+          </div>
+          <img
+            className="close-icon"
+            onClick={modalLiquidate.onClose}
+            src={cancelIcon}
+            alt="cancelIcon"
+          />
+        </div>
+      </Modal>
       <Modal
         open={modalCancel.isOpen}
         onOk={modalCancel.onClose}

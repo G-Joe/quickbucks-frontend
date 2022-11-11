@@ -70,7 +70,8 @@
 .payback-modal,
 .success-modal,
 .confirm-modal,
-.cancel-tranx-modal {
+.cancel-tranx-modal,
+.liquidate-modal {
   width: auto !important;
 
   .ant-modal-content {
@@ -202,6 +203,75 @@
           letter-spacing: 0.5px;
           color: colors.$dark_100;
           margin-bottom: 16px;
+        }
+      }
+
+      .liq-row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        .left,
+        .right {
+          b {
+            font-weight: 500;
+          }
+
+          p.text-blue {
+            color: colors.$secondaryBlue;
+          }
+        }
+      }
+
+      .liq-pay {
+        text-align: center;
+
+        p {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0.15px;
+          color: colors.$dark_100;
+        }
+
+        h2 {
+          font-weight: 600;
+          font-size: 48px;
+          line-height: 116.7%;
+          color: colors.$secondaryBlue;
+        }
+      }
+
+      .liq-from {
+        margin-top: 30px;
+
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: colors.$secondaryBlue;
+        }
+
+        &-card {
+          border-radius: 5px;
+          background-color: colors.$blue_400;
+          padding: 13px 0 13px 17px;
+          margin: 10px 0 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 9px;
+
+          p,
+          b {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+          }
+
+          b {
+            font-weight: 600;
+            color: colors.$secondaryBlue;
+          }
         }
       }
     }
