@@ -18,7 +18,7 @@ type InputProps = {
 const Input = (props: InputProps) => {
   const [visible, setVisible] = useState(false);
 
-  const { label, type, secure, required, value, onChange, style } = props;
+  const { label, type, secure, required, value, onChange } = props;
 
   const toggleVisibility = () => {
     setVisible(!visible);
