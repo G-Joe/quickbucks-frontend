@@ -69,7 +69,8 @@
 .pin-modal,
 .payback-modal,
 .success-modal,
-.confirm-modal {
+.confirm-modal,
+.cancel-tranx-modal {
   width: auto !important;
 
   .ant-modal-content {
@@ -98,11 +99,21 @@
         color: colors.$dark_100;
         letter-spacing: 0.18px;
         margin-bottom: 20px;
+
+        &.cancel-tranx {
+          margin-bottom: 0 !important;
+        }
       }
 
       .check-icon {
         width: 80px;
         height: 80px;
+        margin: 0 auto 10px;
+      }
+
+      .check-failed-icon {
+        width: 43px;
+        height: 43px;
         margin: 0 auto 10px;
       }
 

@@ -9,7 +9,7 @@ type ButtonProps = {
   disabled?: boolean;
   onClick?: () => void;
   size?: "lg" | "md";
-
+  style?: any;
 };
 
 const Button = (props: ButtonProps) => {
