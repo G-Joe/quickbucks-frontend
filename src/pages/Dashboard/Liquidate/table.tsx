@@ -45,8 +45,9 @@ const Table = () => {
           <td>
             <Button label="Pay Back" variant="primary" onClick={modalPay.onOpen}/>
           </td>
-          <td>View Statement</td>
+          <td><Button label="View" variant="text" onClick={modalPay.onOpen}/></td>
         </tr>
+        
         <tr>
           <td>2</td>
           <td>22/04/2022</td>
@@ -65,7 +66,7 @@ const Table = () => {
           <td>
             <Button label="Pay Back" variant="primary" onClick={modalPay.onOpen}/>
           </td>
-          <td>View Statement</td>
+          <td><Button label="View" variant="text" onClick={modalPay.onOpen}/></td>
         </tr>
         <tr>
           <td>3</td>
@@ -85,7 +86,7 @@ const Table = () => {
           <td>
             <Button label="Pay Back" variant="primary" onClick={modalPay.onOpen}/>
           </td>
-          <td>View Statement</td>
+          <td><Button label="View" variant="text" onClick={modalPay.onOpen}/></td>
         </tr>
       </table>
       
@@ -94,21 +95,77 @@ const Table = () => {
       <Modal
         open={modalPay.isOpen}
         onOk={modalPay.onClose}
-        className="payback-modal"
+        className="loan-summary"
         centered
       >
-        <div className="modal-container">
-          <div className="outstanding-box">
-            <p>Loan amount outstanding</p>
-            <b>N239,571.00</b>
-          </div>
-          <Input label="Amount{N}" type="text" />
+        <>
+          <div className="liquidate-view">
+            <h3>My Loan Summary</h3>
+            <table>
+              <tr>
+                <td className="left">Loan Type</td>
+                <td className="right">Payday Loan</td>
+              </tr>
+              <tr>
+                <td className="left">Loan Tenor</td>
+                <td className="right">1 Month</td>
+              </tr>
+              <tr>
+                <td className="left">Loan Amount</td>
+                <td className="right">N20,000</td>
+              </tr>
+              <tr>
+                <td className="left">Date Taken</td>
+                <td className="right">2/2/2022</td>
+              </tr>
+              <tr>
+                <td className="left">Due Date</td>
+                <td className="right">2/3/2022</td>
+              </tr>
+              </table>
+            </div>
+           
+            <table className="breakdown">
+              <thead>
+              <tr>
+                <td>Payment Breakdown</td>
+                <td></td>
+                <td></td>
+              </tr>
+              </thead>
+              <tr>
+                <td>Date</td>
+                <td>Amount Paid</td>
+                <td>1 Month</td>
+              </tr>
+              <tr>
+                <td>1/06/2022</td>
+                <td>N5,000</td>
+                <td>N45,000</td>
+              </tr>
+              <tr>
+                <td>7/06/2022</td>
+                <td>N5,000</td>
+                <td>N40,000</td>
+              </tr>
+              <tr>
+                <td>11/06/2022</td>
+                <td>N10,000</td>
+                <td>N30,000</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td><span className="total">Total overdue</span><br/>N30,000</td>
+              </tr>
+            </table>
+          
+          
           <Button
-            label="Liquidate"
+            label="Download Statement"
             variant="primary"
             onClick={() => {
-              modalPay.onClose();
-              modalPin.onOpen();
+              
             }}
           />
           <img
@@ -117,7 +174,7 @@ const Table = () => {
             src={cancelIcon}
             alt="cancelIcon"
           />
-        </div>
+        </>
       </Modal>
       <Modal
         open={modalPin.isOpen}

@@ -5,7 +5,7 @@ type ButtonProps = {
   label: string;
   type?: "button" | "submit" | "reset" | undefined;
   to?: string;
-  variant?: "primary" | "disabled" | "secondary" | "secondary--outline";
+  variant?: "primary" | "disabled" | "secondary" | "secondary--outline" | "text";
   disabled?: boolean;
   onClick?: () => void;
   size?: "lg" | "md";
