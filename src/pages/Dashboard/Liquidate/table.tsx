@@ -1,5 +1,6 @@
 import { Button, Input } from "components";
 import { Progress } from "antd";
+import checkIcon from "assets/checked-success.svg";
 import cancelIcon from "assets/cancel.svg";
 import { Modal } from "antd";
 import useDisclosure from "components/shared/Modal/useDisclosure";
@@ -11,6 +12,7 @@ const Table = () => {
 
   const modalPin = useDisclosure();
   const modalPay = useDisclosure();
+  const modalView = useDisclosure();
   const modalSuccess = useDisclosure();
 
   return (
@@ -45,7 +47,7 @@ const Table = () => {
           <td>
             <Button label="Pay Back" variant="primary" onClick={modalPay.onOpen}/>
           </td>
-          <td><Button label="View" variant="text" onClick={modalPay.onOpen}/></td>
+          <td><Button label="View" variant="text" onClick={modalView.onOpen}/></td>
         </tr>
         
         <tr>
@@ -66,7 +68,7 @@ const Table = () => {
           <td>
             <Button label="Pay Back" variant="primary" onClick={modalPay.onOpen}/>
           </td>
-          <td><Button label="View" variant="text" onClick={modalPay.onOpen}/></td>
+          <td><Button label="View" variant="text" onClick={modalView.onOpen}/></td>
         </tr>
         <tr>
           <td>3</td>
@@ -86,15 +88,53 @@ const Table = () => {
           <td>
             <Button label="Pay Back" variant="primary" onClick={modalPay.onOpen}/>
           </td>
-          <td><Button label="View" variant="text" onClick={modalPay.onOpen}/></td>
+          <td><Button label="View" variant="text" onClick={modalView.onOpen}/></td>
         </tr>
       </table>
       
     </div>
-    
-      <Modal
+
+    <Modal
         open={modalPay.isOpen}
         onOk={modalPay.onClose}
+        className="payback-modal"
+        centered
+      >
+        <div className="modal-container">
+          <div className="outstanding-box">
+            <p>Loan amount outstanding</p>
+            <b>N239,571.00</b>
+          </div>
+          <Input label="Amount{N}" type="text" />
+          <Button
+            label="Liquidate"
+            variant="primary"
+            onClick={() => {
+              modalPay.onClose();
+              modalPin.onOpen();
+            }}
+          />
+         <br/>
+          <Button
+            label="Liquidate With Card"
+            variant="secondary--outline"
+            onClick={() => {
+              modalPay.onClose();
+              modalPin.onOpen();
+            }}
+          />
+          <img
+            className="close-icon"
+            onClick={modalPay.onClose}
+            src={cancelIcon}
+            alt="cancelIcon"
+          />
+        </div>
+      </Modal>
+    
+      <Modal
+        open={modalView.isOpen}
+        onOk={modalView.onClose}
         className="loan-summary"
         centered
       >
@@ -170,7 +210,7 @@ const Table = () => {
           />
           <img
             className="close-icon"
-            onClick={modalPay.onClose}
+            onClick={modalView.onClose}
             src={cancelIcon}
             alt="cancelIcon"
           />
@@ -196,6 +236,31 @@ const Table = () => {
           <img
             className="close-icon"
             onClick={modalPin.onClose}
+            src={cancelIcon}
+            alt="cancelIcon"
+          />
+        </div>
+      </Modal>
+      <Modal
+        open={modalSuccess.isOpen}
+        onOk={modalSuccess.onClose}
+        className="success-modal"
+        centered
+      >
+        <div className="modal-container">
+          <img className="check-icon" src={checkIcon} alt="checkIcon" />
+          <h3>Liquidation was <br/>Successful </h3>
+          <Button
+            label="Go Home"
+            variant="primary"
+            onClick={() => {
+              modalSuccess.onClose();
+            }}
+            to="/dashboard/home"
+          />
+          <img
+            className="close-icon"
+            onClick={modalSuccess.onClose}
             src={cancelIcon}
             alt="cancelIcon"
           />
