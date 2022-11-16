@@ -7,6 +7,8 @@ import phone1Img from "assets/image 4 (1).png";
 import phone2Img from "assets/image 4.png";
 import phone3Img from "assets/image_10.png";
 import Device from "./Device";
+import Disbursed from "./DeviceStatuses/Disbursed";
+import Expired from "./DeviceStatuses/Expired"
 import PendingPickup from "./DeviceStatuses/PendingPickup";
 import Outstanding from "./DeviceStatuses/Outstanding";
 
@@ -15,6 +17,7 @@ const DeviceFinanceTab = () => {
 
   const handleDeviceClicked = (label: string) => {
     setDeviceStatusPage(label);
+    console.log(label);
   };
 
   const renderDeviceStatusPage = (status: any) => {
@@ -30,6 +33,16 @@ const DeviceFinanceTab = () => {
           img={phone1Img}
           setDeviceStatusPage={setDeviceStatusPage}
         />
+      ),
+      expired:(
+        <Expired
+        img={phone1Img}
+        setDeviceStatusPage={setDeviceStatusPage}/>
+      ),
+      disbursed:(
+        <Disbursed
+        img={phone1Img}
+        setDeviceStatusPage={setDeviceStatusPage}/>
       ),
     };
     return statuses[status];
@@ -73,6 +86,7 @@ const DeviceFinanceTab = () => {
                 id="296746"
                 label="Disbursed"
                 labelVariant="green"
+                onClick={() => handleDeviceClicked("disbursed")}
               />
               <Device
                 img={phone2Img}
@@ -87,6 +101,7 @@ const DeviceFinanceTab = () => {
                 id="296746"
                 label="Expired"
                 labelVariant="grey"
+                onClick={() => handleDeviceClicked("expired")}
               />
             </div>
           </>

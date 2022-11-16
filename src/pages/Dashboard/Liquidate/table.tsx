@@ -1,5 +1,6 @@
 import { Button, Input } from "components";
 import { Progress } from "antd";
+import checkIcon from "assets/checked-success.svg";
 import cancelIcon from "assets/cancel.svg";
 import { Modal } from "antd";
 import useDisclosure from "components/shared/Modal/useDisclosure";
@@ -11,6 +12,7 @@ const Table = () => {
 
   const modalPin = useDisclosure();
   const modalPay = useDisclosure();
+  const modalView = useDisclosure();
   const modalSuccess = useDisclosure();
 
   return (
@@ -45,8 +47,9 @@ const Table = () => {
           <td>
             <Button label="Pay Back" variant="primary" onClick={modalPay.onOpen}/>
           </td>
-          <td>View Statement</td>
+          <td><Button label="View" variant="text" onClick={modalView.onOpen}/></td>
         </tr>
+        
         <tr>
           <td>2</td>
           <td>22/04/2022</td>
@@ -65,7 +68,7 @@ const Table = () => {
           <td>
             <Button label="Pay Back" variant="primary" onClick={modalPay.onOpen}/>
           </td>
-          <td>View Statement</td>
+          <td><Button label="View" variant="text" onClick={modalView.onOpen}/></td>
         </tr>
         <tr>
           <td>3</td>
@@ -85,13 +88,13 @@ const Table = () => {
           <td>
             <Button label="Pay Back" variant="primary" onClick={modalPay.onOpen}/>
           </td>
-          <td>View Statement</td>
+          <td><Button label="View" variant="text" onClick={modalView.onOpen}/></td>
         </tr>
       </table>
       
     </div>
-    
-      <Modal
+
+    <Modal
         open={modalPay.isOpen}
         onOk={modalPay.onClose}
         className="payback-modal"
@@ -111,6 +114,15 @@ const Table = () => {
               modalPin.onOpen();
             }}
           />
+         <br/>
+          <Button
+            label="Liquidate With Card"
+            variant="secondary--outline"
+            onClick={() => {
+              modalPay.onClose();
+              modalPin.onOpen();
+            }}
+          />
           <img
             className="close-icon"
             onClick={modalPay.onClose}
@@ -118,6 +130,91 @@ const Table = () => {
             alt="cancelIcon"
           />
         </div>
+      </Modal>
+    
+      <Modal
+        open={modalView.isOpen}
+        onOk={modalView.onClose}
+        className="loan-summary"
+        centered
+      >
+        <>
+          <div className="liquidate-view">
+            <h3>My Loan Summary</h3>
+            <table>
+              <tr>
+                <td className="left">Loan Type</td>
+                <td className="right">Payday Loan</td>
+              </tr>
+              <tr>
+                <td className="left">Loan Tenor</td>
+                <td className="right">1 Month</td>
+              </tr>
+              <tr>
+                <td className="left">Loan Amount</td>
+                <td className="right">N20,000</td>
+              </tr>
+              <tr>
+                <td className="left">Date Taken</td>
+                <td className="right">2/2/2022</td>
+              </tr>
+              <tr>
+                <td className="left">Due Date</td>
+                <td className="right">2/3/2022</td>
+              </tr>
+              </table>
+            </div>
+           
+            <table className="breakdown">
+              <thead>
+              <tr>
+                <td>Payment Breakdown</td>
+                <td></td>
+                <td></td>
+              </tr>
+              </thead>
+              <tr>
+                <td>Date</td>
+                <td>Amount Paid</td>
+                <td>1 Month</td>
+              </tr>
+              <tr>
+                <td>1/06/2022</td>
+                <td>N5,000</td>
+                <td>N45,000</td>
+              </tr>
+              <tr>
+                <td>7/06/2022</td>
+                <td>N5,000</td>
+                <td>N40,000</td>
+              </tr>
+              <tr>
+                <td>11/06/2022</td>
+                <td>N10,000</td>
+                <td>N30,000</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td><span className="total">Total overdue</span><br/>N30,000</td>
+              </tr>
+            </table>
+          
+          
+          <Button
+            label="Download Statement"
+            variant="primary"
+            onClick={() => {
+              
+            }}
+          />
+          <img
+            className="close-icon"
+            onClick={modalView.onClose}
+            src={cancelIcon}
+            alt="cancelIcon"
+          />
+        </>
       </Modal>
       <Modal
         open={modalPin.isOpen}
@@ -139,6 +236,31 @@ const Table = () => {
           <img
             className="close-icon"
             onClick={modalPin.onClose}
+            src={cancelIcon}
+            alt="cancelIcon"
+          />
+        </div>
+      </Modal>
+      <Modal
+        open={modalSuccess.isOpen}
+        onOk={modalSuccess.onClose}
+        className="success-modal"
+        centered
+      >
+        <div className="modal-container">
+          <img className="check-icon" src={checkIcon} alt="checkIcon" />
+          <h3>Liquidation was <br/>Successful </h3>
+          <Button
+            label="Go Home"
+            variant="primary"
+            onClick={() => {
+              modalSuccess.onClose();
+            }}
+            to="/dashboard/home"
+          />
+          <img
+            className="close-icon"
+            onClick={modalSuccess.onClose}
             src={cancelIcon}
             alt="cancelIcon"
           />

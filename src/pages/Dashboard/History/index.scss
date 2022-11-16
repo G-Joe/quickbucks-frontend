@@ -215,6 +215,10 @@
         line-height: 24px;
         letter-spacing: 0.25px;
       }
+      .outstanding-price{
+        font-weight: 600;
+      }
+
       b {
         font-weight: 600;
         font-size: 14px;
@@ -223,6 +227,33 @@
       }
     }
 
+    .pending-box{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      width: 100%;
+      background-color: #ecfcb0;
+      color: colors.$red_400;
+      margin: 27px 0;
+      padding: 19px 16px 16px 16px;
+      border-radius: 10px;
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.25px;
+        color: #97b12b;
+      }
+
+
+      .pending-price{
+        font-weight: 600;
+      }
+      
+
+    }
     .device-summary-col {
       font-size: 14px;
       line-height: 24px;
@@ -279,6 +310,15 @@
 
     .req-date {
       margin: 16px 0;
+    }
+
+    .disbursed{
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .expired{
+      text-align: center;
     }
 
     .mb-10 {
