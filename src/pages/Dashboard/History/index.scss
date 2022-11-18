@@ -338,9 +338,11 @@
 }
 
 .tab-content {
-  width: 100%;
+  // width: 100%;
+  overflow-x: scroll;
   background-color: #ffffff;
-  margin-right: 109px;
+  // margin-right: 109px;
+  padding: 0 20px;
   border-radius: 8px;
   box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
 
@@ -453,6 +455,8 @@
 }
 
 @media (max-width: 500px) {
+  .tab-content {
+  }
   .dev-finance {
     .ordered-device {
       .card {
