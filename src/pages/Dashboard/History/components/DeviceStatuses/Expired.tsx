@@ -37,7 +37,7 @@ const Expired = ({ img, setDeviceStatusPage }: any) => {
 
           <p className="req-date expired">Request date: November 20,2019-01:00PM</p>
 
-          <Button label="View Pickup Instruction" variant="disabled" />
+          <Button label="Expired" variant="disabled" />
 
           <p className="req-date expired">Your Require Has Exceeded 72hours</p>
 
