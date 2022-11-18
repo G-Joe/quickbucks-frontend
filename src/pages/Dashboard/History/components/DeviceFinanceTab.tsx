@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Input } from "components";
 import SearchImg from "assets/search2.png";
 import FilterImg from "assets/filter2.png";
@@ -8,16 +8,19 @@ import phone2Img from "assets/image 4.png";
 import phone3Img from "assets/image_10.png";
 import Device from "./Device";
 import Disbursed from "./DeviceStatuses/Disbursed";
-import Expired from "./DeviceStatuses/Expired"
+import Expired from "./DeviceStatuses/Expired";
 import PendingPickup from "./DeviceStatuses/PendingPickup";
 import Outstanding from "./DeviceStatuses/Outstanding";
 
-const DeviceFinanceTab = () => {
+const DeviceFinanceTab = ({ tab }: any) => {
   const [deviceStatusPage, setDeviceStatusPage] = useState("");
+
+  useEffect(() => {
+    tab === "2" && setDeviceStatusPage("pending_pickup");
+  }, [tab]);
 
   const handleDeviceClicked = (label: string) => {
     setDeviceStatusPage(label);
-    console.log(label);
   };
 
   const renderDeviceStatusPage = (status: any) => {
@@ -34,15 +37,11 @@ const DeviceFinanceTab = () => {
           setDeviceStatusPage={setDeviceStatusPage}
         />
       ),
-      expired:(
-        <Expired
-        img={phone1Img}
-        setDeviceStatusPage={setDeviceStatusPage}/>
+      expired: (
+        <Expired img={phone1Img} setDeviceStatusPage={setDeviceStatusPage} />
       ),
-      disbursed:(
-        <Disbursed
-        img={phone1Img}
-        setDeviceStatusPage={setDeviceStatusPage}/>
+      disbursed: (
+        <Disbursed img={phone1Img} setDeviceStatusPage={setDeviceStatusPage} />
       ),
     };
     return statuses[status];

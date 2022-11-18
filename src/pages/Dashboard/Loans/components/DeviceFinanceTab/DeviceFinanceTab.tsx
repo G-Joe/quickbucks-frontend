@@ -24,7 +24,7 @@ import Select from "components/shared/Input/Select";
 const DeviceFinanceTab = ({ taken, outstanding }: any) => {
   const [showDeviceFinanceLanding, setShowDeviceFinanceLanding] =
     useState(true);
-  const [showDeviceOrdered, setShowDeviceOrdered] = useState(false);
+  const [showDeviceOrdered] = useState(false);
   const [activeNetwork, setActiveNetwork] = useState(0);
   const [checked, setChecked] = useState(false);
   const [orderPhone, setOrderPhone] = useState(false);
@@ -76,7 +76,6 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
 
   return (
     <>
-      {console.log(22, checkMaxWidth())}
       <div className="my-loans">
         {showDeviceFinanceLanding && !showDeviceOrdered ? (
           <>
@@ -440,7 +439,7 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
           )
         )}
 
-        {showDeviceOrdered && (
+        {/* {showDeviceOrdered && (
           <div className="ordered-device">
             <div className="card">
               <div className="device-details">
@@ -471,7 +470,7 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
               <Button label="View Pickup Instruction" variant="primary" />
             </div>
           </div>
-        )}
+        )} */}
       </div>
 
       <Modal
@@ -577,8 +576,9 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
             variant="primary"
             onClick={() => {
               modalConfirm.onClose();
-              setShowDeviceOrdered(true);
             }}
+            to="/dashboard/history"
+            state={{ tab: "2" }}
           />
           <img
             className="close-icon"

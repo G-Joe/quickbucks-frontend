@@ -28,9 +28,9 @@ const Sidebar = ({ menuIcon, handleMenuClick }: any) => {
                         setActiveParent("");
                       } else {
                         setActiveParent(item.path);
-                        handleMenuClick();
                       }
 
+                      !item.children && handleMenuClick();
                       item.children && e.preventDefault();
                     }}
                     to={item.path}

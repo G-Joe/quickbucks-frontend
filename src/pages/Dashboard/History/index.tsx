@@ -1,6 +1,7 @@
+import { Modal, Tabs } from "antd";
+import { useLocation } from "react-router-dom";
 import historyLogo from "assets/history.svg";
 import Header from "components/Dashboard/Header/Header";
-import { Modal, Tabs } from "antd";
 import useDisclosure from "components/shared/Modal/useDisclosure";
 import { Button } from "components";
 import cancelIcon from "assets/cancel.svg";
@@ -12,13 +13,17 @@ import DeviceFinanceTab from "./components/DeviceFinanceTab";
 
 const History = () => {
   const modalSuccess = useDisclosure();
+  const location = useLocation();
+
+  const tabFromState = location.state?.tab ?? "1";
+
   return (
     <>
       <div className="main-fit">
         <Header img={historyLogo} title="History" />
 
         <Tabs
-          defaultActiveKey="1"
+          defaultActiveKey={tabFromState}
           items={[
             {
               label: "Loan History",
@@ -28,7 +33,7 @@ const History = () => {
             {
               label: "Device Finance",
               key: "2",
-              children: <DeviceFinanceTab />,
+              children: <DeviceFinanceTab tab={tabFromState} />,
             },
           ]}
         ></Tabs>

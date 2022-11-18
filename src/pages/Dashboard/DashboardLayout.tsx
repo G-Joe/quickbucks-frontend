@@ -17,11 +17,13 @@ const DashboardLayout = ({ children }: any) => {
   };
 
   return (
-    <>
+    <div className={`${menuIcon && "overlay"}`}>
       <Navbar handleMenuClick={handleMenuClick} />
       <div className="page-wrapper">
         <Sidebar handleMenuClick={handleMenuClick} menuIcon={menuIcon} />
-        <div className="layout">{children}</div>
+        <div className="layout" onClick={() => setMenuIcon(false)}>
+          {children}
+        </div>
       </div>
       <div className="footer">
         <div className="copyright-wrapper">
@@ -34,7 +36,7 @@ const DashboardLayout = ({ children }: any) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
