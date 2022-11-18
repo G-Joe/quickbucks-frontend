@@ -215,7 +215,7 @@
         line-height: 24px;
         letter-spacing: 0.25px;
       }
-      .outstanding-price{
+      .outstanding-price {
         font-weight: 600;
       }
 
@@ -227,7 +227,7 @@
       }
     }
 
-    .pending-box{
+    .pending-box {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -247,12 +247,9 @@
         color: #97b12b;
       }
 
-
-      .pending-price{
+      .pending-price {
         font-weight: 600;
       }
-      
-
     }
     .device-summary-col {
       font-size: 14px;
@@ -312,12 +309,12 @@
       margin: 16px 0;
     }
 
-    .disbursed{
+    .disbursed {
       text-align: center;
       font-weight: 500;
     }
 
-    .expired{
+    .expired {
       text-align: center;
     }
 
@@ -461,6 +458,16 @@
       .card {
         padding: 50px 34px 53px 34px;
         width: 100%;
+      }
+
+      .pay-plan-row {
+        gap: 20px;
+      }
+
+      .pay-plan {
+        &.card {
+          padding: 16px 10px;
+        }
       }
     }
   }

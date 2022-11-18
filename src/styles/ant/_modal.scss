@@ -534,7 +534,9 @@
   .pin-modal,
   .payback-modal,
   .success-modal,
-  .confirm-modal {
+  .confirm-modal,
+  .cancel-tranx-modal,
+  .liquidate-modal {
     width: 100% !important;
 
     .ant-modal-content {
