@@ -1,6 +1,7 @@
 import headerLogo from "assets/liquidate-card.svg";
 import Header from "components/Dashboard/Header/Header";
 import Table from "pages/Dashboard/Liquidate/table";
+import MobileTab from "./mobile-tab";
 import { Input, Button } from "components";
 import "./table.scss";
 import { HiFilter, HiSearch } from "react-icons/hi";
@@ -22,7 +23,14 @@ const Liquidate = () => {
             <Input label="" type="search" placeholder="Search by loan type" />
           </div>
         </div>
-        <Table />
+        <div className="table">
+           <Table />
+        </div>
+       
+      </div>
+      <div className="mobile-table">
+        <h3>S/N</h3>
+        <MobileTab/>
       </div>
     </>
   );

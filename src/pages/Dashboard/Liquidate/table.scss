@@ -133,3 +133,64 @@
     padding: 60px 45px 32px 46px;
   }
 }
+
+.mobile-table{
+  display:none;
+}
+
+@media (max-width: 500px) {
+  .table-content {
+    height: 110px;
+    width:100%;
+    padding-right: 12px;
+
+    .search{
+      margin-top: 0px;
+    }
+    .table{
+      display:none;
+    }
+  }
+  
+  .mobile-table{
+    display:contents;
+
+    h3{
+      padding-left:17px;
+      padding-bottom: 24px;
+      padding-top: 24px;
+      font-size:11px;
+      font-weight: 600;
+      
+    }
+  }
+  .liquidate-toggle-table{
+    tr{
+    height:32px;
+  }td{
+    padding-right: 24px;
+    padding-bottom: 16px;
+  }.heading{
+    font-weight: 600;
+    font-size:12px;
+    line-height: 16px;
+  }
+  }
+
+  .ant-collapse-borderless{
+    background-color: #ffffff;
+    box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
+    border-radius: 8px;
+  }
+
+.ant-collapse-header-text{
+  font-weight: 500;
+  font-size:14px;
+}
+
+
+.loan-summary .ant-modal-content{
+  width:100%;
+ 
+}
+}

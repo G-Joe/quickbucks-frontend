@@ -121,3 +121,20 @@
     border-bottom: 1px solid colors.$grey_300;
   }
 }
+
+@media (max-width: 500px) {
+  .view-emp.form-card, .upload-emp.form-card{
+    width:430px;
+  }
+  .my-details .edit-emp.form-card{
+    width:430px;
+  }
+
+  .my-details .edit-emp.form-card .row .btn{
+    width:170px;
+  }
+
+  .upload-emp.form-card .row .btn{
+    width:155px;
+  }
+}
