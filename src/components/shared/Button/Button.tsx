@@ -5,11 +5,17 @@ type ButtonProps = {
   label: string;
   type?: "button" | "submit" | "reset" | undefined;
   to?: string;
-  variant?: "primary" | "disabled" | "secondary" | "secondary--outline" | "text";
+  variant?:
+    | "primary"
+    | "disabled"
+    | "secondary"
+    | "secondary--outline"
+    | "text";
   disabled?: boolean;
   onClick?: () => void;
   size?: "lg" | "md";
   style?: any;
+  state?: any;
 };
 
 const Button = (props: ButtonProps) => {
@@ -20,12 +26,13 @@ const Button = (props: ButtonProps) => {
     variant = "disabled",
     disabled,
     size = "lg",
+    state,
   } = props;
 
   const BTN_BG = disabled ? "disabled" : variant;
 
   return (
-    <Link to={to || ""}>
+    <Link to={to || ""} state={state}>
       <button
         {...props}
         type={type}
