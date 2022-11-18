@@ -233,6 +233,8 @@ const Text = () => {
 
 
 const mobileTab = () => (
+  <>
+  <div>
   <Collapse bordered={false} defaultActiveKey={['1']}>
     <Panel header="1" key="1">
       <Text/>
@@ -247,5 +249,19 @@ const mobileTab = () => (
     <Text/>
     </Panel>
   </Collapse>
+  </div>
+  <div>
+    <table className="liquidate-tab-footer">
+    <tr className="head">
+            <td></td>
+            <td></td>
+            <td>Rows per page: 10 <span style={{paddingLeft:20,}}>&#9662;</span></td>
+            <td>1-6 of 6</td>
+            <td> <span style={{paddingRight:30,}}>&lt;</span><span>	&gt; </span></td>
+         
+        </tr>
+    </table>
+  </div>
+  </>
 );
 export default mobileTab;
