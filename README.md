@@ -28,3 +28,6 @@ between 'development', 'production', 'test'
 
 NOTE: release use the version number in package.json hence always update this for
 any new release
+
+
+### Testing deployment on slack
