@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Modal } from "antd";
 
-
 import searchLogo from "assets/Vector copy 4.svg";
 import cancelIcon from "assets/cancel.svg";
 import checkIcon from "assets/checked-success.svg";
@@ -20,7 +19,7 @@ import lady from "assets/device-finance-image.png";
 import blender from "assets/blender.png";
 import inverter from "assets/inverter.png";
 import playstation from "assets/playstation.png";
-import ps from "assets/ps.png"
+import ps from "assets/ps.png";
 import phone from "assets/phone-category.png";
 import sanyotv from "assets/sanyo-tv.png";
 import tecnolaptop from "assets/tecno-laptop.png";
@@ -31,7 +30,6 @@ import Device from "../../components/Device/Device";
 import Category from "./Device-category";
 import Select from "components/shared/Input/Select";
 import "../Device/Device.scss";
-
 
 const DeviceFinanceTab = ({ taken, outstanding }: any) => {
   const [showDeviceFinanceLanding, setShowDeviceFinanceLanding] =
@@ -108,53 +106,43 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
             </div>
 
             <div className="device-finance-banner">
-              <img src={lady} alt="banner"/>
+              <img src={lady} alt="banner" />
             </div>
             <div className="row">
               <div className="category">
                 <div>
-                <Category
-                  img={blender}
-                />
-                <h4 className="device-info-header">Household Goods</h4>
+                  <Category img={blender} />
+                  <h4 className="device-info-header">Household Goods</h4>
                 </div>
                 <div>
-                <Category
-                  img={phone}
-  
-                />
-                 <h4 className="device-info-header">Mobile Phones</h4>
+                  <Category img={phone} />
+                  <h4 className="device-info-header">Mobile Phones</h4>
                 </div>
                 <div>
-                <Category
-                  img={inverter}
-                
-                />
-                 <h4 className="device-info-header">Energy Finance</h4>
+                  <Category img={inverter} />
+                  <h4 className="device-info-header">Energy Finance</h4>
                 </div>
                 <div>
-               <Category
-                  img={playstation}
-               
-                />
-                 <h4 className="device-info-header">Gadgets</h4>
+                  <Category img={playstation} />
+                  <h4 className="device-info-header">Gadgets</h4>
                 </div>
-             </div> 
+              </div>
             </div>
 
             <div className="row">
-                <div className="best-sellers">
-                    <h4>Best Sellers</h4>
-                    <h4>View All</h4>
-                </div>
+              <div className="best-sellers">
+                <h4>Best Sellers</h4>
+                <h4>View All</h4>
+              </div>
             </div>
             <div className="row">
               <div className="devices">
-               
                 <Device
                   img={sanyotv}
                   name="Sanyo 433"
-                  specs={["The slim LED TV will be a perfect addition to electronics collection"]}
+                  specs={[
+                    "The slim LED TV will be a perfect addition to electronics collection",
+                  ]}
                   amount="N25,000.00"
                   onClick={handleDeviceClicked}
                 />
@@ -168,7 +156,9 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
                 <Device
                   img={ps}
                   name="PS5"
-                  specs={["Ultra-high-speed SSD, deeper immersion with support for haptic"]}
+                  specs={[
+                    "Ultra-high-speed SSD, deeper immersion with support for haptic",
+                  ]}
                   amount="N25,000.00"
                   onClick={handleDeviceClicked}
                   noStock
