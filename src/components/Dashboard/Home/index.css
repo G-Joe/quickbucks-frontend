@@ -21,8 +21,8 @@
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.15px;
-  text-transform: capitalize;
   color: #32496f;
+  
 }
 
 .value {
@@ -33,46 +33,76 @@
   padding-top: 10px;
 }
 
+.status{
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  margin-top: 10px;
+}
+
+.butt{
+  width:99px;
+  margin: 10px 78px 0px 78px;
+}
+
+button.btn{
+text-transform: none;
+height: 45px;
+}
+
 .summary {
   display: flex;
   gap: 27px;
 }
 
 .summary-box {
-  height: 178px;
+  height: 200px;
   border-radius: 10px;
-  padding: 54px 0px 54px 24px;
   border: 1px solid transparent;
   min-width: 249px;
   width: 100%;
+  text-align: center;
 }
 
 .arrayItem {
-  background-color: #e9f5fe;
+  background-color: #FFF5E5;
+  padding: 23px 0px 23px 0px;
+
 }
+
 .arrayItem:hover {
-  border: 1px solid #9ed3fd;
+  border: 1px solid #ffd899;
 }
 
 .arrayItem1 {
-  background-color: #edf7ed;
+  background-color: #f2e7fe;
+  padding: 33px 0px 33px 0px;
 }
 .arrayItem1:hover {
-  border: 1px solid #a9f9ac;
+  border: 1px solid #C38EFD;
 }
 
 .arrayItem2 {
-  background-color: #f2e7fe;
+  background-color:  #e9f5fe;
+  padding: 12px 0px 12px 0px;
 }
+
 .arrayItem2:hover {
-  border: 1px solid#C38EFD;
+  border: 1px solid #9ed3fd;
+}
+
+.arrayItem2 button.btn{
+  background-color: #5FB9FC;
 }
 
 .arrayItem3 {
-  background-color: #feeceb;
+  background-color: #edf7ed;
+  padding:47px 0px 47px 0px;
 }
+
 .arrayItem3:hover {
-  border: 1px solid #ffb9b4;
+  border: 1px solid #9ed3fd;
 }
 
 @media (max-width: 500px) {
@@ -92,5 +122,10 @@
 
   .summary {
     flex-direction: column;
+  }
+
+  .butt{
+    width:99px;
+    margin: 10px 78px 0px 120px;
   }
 }

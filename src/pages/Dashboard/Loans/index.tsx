@@ -45,7 +45,7 @@ const Loans = () => {
               label: "Device Finance Loan",
               key: "3",
               children: (
-                <DeviceFinanceTab taken="N70,000" outstanding="N15,000" />
+                <DeviceFinanceTab/>
               ),
             },
             {
