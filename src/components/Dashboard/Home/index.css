@@ -22,18 +22,17 @@
   line-height: 24px;
   letter-spacing: 0.15px;
   color: #32496f;
-  
 }
 
 .value {
   font-weight: 600;
-  font-size: 34px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 24px;
   color: #32496f;
   padding-top: 10px;
 }
 
-.status{
+.status {
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
@@ -41,14 +40,14 @@
   margin-top: 10px;
 }
 
-.butt{
-  width:99px;
+.butt {
+  width: 99px;
   margin: 10px 78px 0px 78px;
 }
 
-button.btn{
-text-transform: none;
-height: 45px;
+button.btn {
+  text-transform: none;
+  height: 37px;
 }
 
 .summary {
@@ -57,7 +56,6 @@ height: 45px;
 }
 
 .summary-box {
-  height: 200px;
   border-radius: 10px;
   border: 1px solid transparent;
   min-width: 249px;
@@ -66,9 +64,8 @@ height: 45px;
 }
 
 .arrayItem {
-  background-color: #FFF5E5;
-  padding: 23px 0px 23px 0px;
-
+  background-color: #fff5e5;
+  padding: 23px 0px 22px 0px;
 }
 
 .arrayItem:hover {
@@ -80,11 +77,11 @@ height: 45px;
   padding: 33px 0px 33px 0px;
 }
 .arrayItem1:hover {
-  border: 1px solid #C38EFD;
+  border: 1px solid #c38efd;
 }
 
 .arrayItem2 {
-  background-color:  #e9f5fe;
+  background-color: #e9f5fe;
   padding: 12px 0px 12px 0px;
 }
 
@@ -92,13 +89,13 @@ height: 45px;
   border: 1px solid #9ed3fd;
 }
 
-.arrayItem2 button.btn{
-  background-color: #5FB9FC;
+.arrayItem2 button.btn {
+  background-color: #5fb9fc;
 }
 
 .arrayItem3 {
   background-color: #edf7ed;
-  padding:47px 0px 47px 0px;
+  padding: 47px 0px 47px 0px;
 }
 
 .arrayItem3:hover {
@@ -124,8 +121,8 @@ height: 45px;
     flex-direction: column;
   }
 
-  .butt{
-    width:99px;
+  .butt {
+    width: 99px;
     margin: 10px 78px 0px 120px;
   }
 }

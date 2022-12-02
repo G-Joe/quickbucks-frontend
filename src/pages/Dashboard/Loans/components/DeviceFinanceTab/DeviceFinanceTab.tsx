@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Modal } from "antd";
+import { Modal, Collapse } from "antd";
 
 import searchLogo from "assets/Vector copy 4.svg";
 import cancelIcon from "assets/cancel.svg";
@@ -47,6 +47,9 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
   const modalSuccess = useDisclosure();
   const modalSummary = useDisclosure();
   const modalConfirm = useDisclosure();
+  const modalCategory = useDisclosure();
+
+  const { Panel } = Collapse;
 
   const getWindowSize = () => {
     const { innerWidth, innerHeight } = window;
@@ -93,7 +96,7 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
             {bestSellers && <p className="best-text">Best sellers</p>}
             <div className="row">
               <div className="search">
-                <div className="dropdown">
+                <div className="dropdown" onClick={modalCategory.onOpen}>
                   <select>
                     <option value="">Categories</option>
                   </select>
@@ -119,7 +122,10 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
                       <Category img={blender} />
                       <h4 className="device-info-header">Household Goods</h4>
                     </div>
-                    <div>
+                    <div
+                      style={{ cursor: "pointer" }}
+                      onClick={() => setBestSellers(true)}
+                    >
                       <Category img={phone} />
                       <h4 className="device-info-header">Mobile Phones</h4>
                     </div>
@@ -654,6 +660,53 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
           <img
             className="close-icon"
             onClick={modalPay.onClose}
+            src={cancelIcon}
+            alt="cancelIcon"
+          />
+        </div>
+      </Modal>
+      <Modal
+        open={modalCategory.isOpen}
+        onOk={modalCategory.onClose}
+        className="payback-modal"
+        centered
+      >
+        <div className="modal-container">
+          <div style={{ margin: "16px 0" }}>
+            <Collapse accordion expandIconPosition="right" className="collapse">
+              <Panel header="Categories" key="1">
+                <ul>
+                  <li>Household</li>
+                  <li>Mobile Phones</li>
+                  <li>Energy Finance</li>
+                  <li>Gadgets</li>
+                </ul>
+              </Panel>
+            </Collapse>
+          </div>
+          <div style={{ margin: "16px 0" }}>
+            <Collapse accordion expandIconPosition="right" className="collapse">
+              <Panel header="Brand" key="2">
+                <ul>
+                  <li>Household</li>
+                  <li>Mobile Phones</li>
+                  <li>Energy Finance</li>
+                  <li>Gadgets</li>
+                </ul>
+              </Panel>
+            </Collapse>
+          </div>
+          <Input label="Max Price" type="text" />
+          <Input label="Min Price" type="text" />
+          <Button
+            style={{ height: 56 }}
+            label="Filter"
+            variant="primary"
+            onClick={modalCategory.onClose}
+          />
+          <img
+            className="close-icon"
+            onClick={modalCategory.onClose}
             src={cancelIcon}
             alt="cancelIcon"
           />
