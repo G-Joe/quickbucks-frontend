@@ -42,7 +42,7 @@
 
 .butt {
   width: 99px;
-  margin: 10px 78px 0px 78px;
+  margin: auto;
 }
 
 button.btn {
@@ -124,6 +124,7 @@ button.btn {
   .butt {
     width: 99px;
     margin: auto;
+
   }
 }
 
