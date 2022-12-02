@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { Modal } from "antd";
-
+import { Modal, Collapse } from "antd";
 
 import searchLogo from "assets/Vector copy 4.svg";
 import cancelIcon from "assets/cancel.svg";
@@ -20,7 +19,7 @@ import lady from "assets/device-finance-image.png";
 import blender from "assets/blender.png";
 import inverter from "assets/inverter.png";
 import playstation from "assets/playstation.png";
-import ps from "assets/ps.png"
+import ps from "assets/ps.png";
 import phone from "assets/phone-category.png";
 import sanyotv from "assets/sanyo-tv.png";
 import tecnolaptop from "assets/tecno-laptop.png";
@@ -32,7 +31,6 @@ import Category from "./Device-category";
 import Select from "components/shared/Input/Select";
 import "../Device/Device.scss";
 
-
 const DeviceFinanceTab = ({ taken, outstanding }: any) => {
   const [showDeviceFinanceLanding, setShowDeviceFinanceLanding] =
     useState(true);
@@ -42,12 +40,16 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
   const [orderPhone, setOrderPhone] = useState(false);
   const [deviceColor, setDeviceColor] = useState("pink");
   const [viewDevice, setViewDevice] = useState(false);
+  const [bestSellers, setBestSellers] = useState(false);
 
   const modalPay = useDisclosure();
   const modalPin = useDisclosure();
   const modalSuccess = useDisclosure();
   const modalSummary = useDisclosure();
   const modalConfirm = useDisclosure();
+  const modalCategory = useDisclosure();
+
+  const { Panel } = Collapse;
 
   const getWindowSize = () => {
     const { innerWidth, innerHeight } = window;
@@ -91,9 +93,10 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
       <div className="my-loans">
         {showDeviceFinanceLanding && !showDeviceOrdered ? (
           <>
+            {bestSellers && <p className="best-text">Best sellers</p>}
             <div className="row">
               <div className="search">
-                <div className="dropdown">
+                <div className="dropdown" onClick={modalCategory.onOpen}>
                   <select>
                     <option value="">Categories</option>
                   </select>
@@ -107,54 +110,57 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
               </div>
             </div>
 
-            <div className="device-finance-banner">
-              <img src={lady} alt="banner"/>
-            </div>
-            <div className="row">
-              <div className="category">
-                <div>
-                <Category
-                  img={blender}
-                />
-                <h4 className="device-info-header">Household Goods</h4>
+            {/* Temporary fix till API integrations start */}
+            {!bestSellers && (
+              <>
+                <div className="device-finance-banner">
+                  <img src={lady} alt="banner" />
                 </div>
-                <div>
-                <Category
-                  img={phone}
-  
-                />
-                 <h4 className="device-info-header">Mobile Phones</h4>
+                <div className="row">
+                  <div className="category">
+                    <div>
+                      <Category img={blender} />
+                      <h4 className="device-info-header">Household Goods</h4>
+                    </div>
+                    <div
+                      style={{ cursor: "pointer" }}
+                      onClick={() => setBestSellers(true)}
+                    >
+                      <Category img={phone} />
+                      <h4 className="device-info-header">Mobile Phones</h4>
+                    </div>
+                    <div>
+                      <Category img={inverter} />
+                      <h4 className="device-info-header">Energy Finance</h4>
+                    </div>
+                    <div>
+                      <Category img={playstation} />
+                      <h4 className="device-info-header">Gadgets</h4>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                <Category
-                  img={inverter}
-                
-                />
-                 <h4 className="device-info-header">Energy Finance</h4>
-                </div>
-                <div>
-               <Category
-                  img={playstation}
-               
-                />
-                 <h4 className="device-info-header">Gadgets</h4>
-                </div>
-             </div> 
-            </div>
 
-            <div className="row">
-                <div className="best-sellers">
+                <div className="row">
+                  <div className="best-sellers">
                     <h4>Best Sellers</h4>
-                    <h4>View All</h4>
+                    <h4
+                      style={{ cursor: "pointer" }}
+                      onClick={() => setBestSellers(true)}
+                    >
+                      View All
+                    </h4>
+                  </div>
                 </div>
-            </div>
+              </>
+            )}
             <div className="row">
               <div className="devices">
-               
                 <Device
                   img={sanyotv}
                   name="Sanyo 433"
-                  specs={["The slim LED TV will be a perfect addition to electronics collection"]}
+                  specs={[
+                    "The slim LED TV will be a perfect addition to electronics collection",
+                  ]}
                   amount="N25,000.00"
                   onClick={handleDeviceClicked}
                 />
@@ -168,7 +174,9 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
                 <Device
                   img={ps}
                   name="PS5"
-                  specs={["Ultra-high-speed SSD, deeper immersion with support for haptic"]}
+                  specs={[
+                    "Ultra-high-speed SSD, deeper immersion with support for haptic",
+                  ]}
                   amount="N25,000.00"
                   onClick={handleDeviceClicked}
                   noStock
@@ -187,38 +195,42 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
                   amount="N25,000.00"
                   onClick={handleDeviceClicked}
                 />
-                {/* <Device
-                  img={phone1Img}
-                  name="Samsung A23"
-                  specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
-                  amount="N25,000.00"
-                />
-                <Device
-                  img={phone1Img}
-                  name="Samsung A23"
-                  specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
-                  amount="N25,000.00"
-                  noStock
-                />
-                <Device
-                  img={phone1Img}
-                  name="Samsung A23"
-                  specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
-                  amount="N25,000.00"
-                />
-                <Device
-                  img={phone1Img}
-                  name="Samsung A23"
-                  specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
-                  amount="N25,000.00"
-                />
-                <Device
-                  img={phone1Img}
-                  name="Samsung A23"
-                  specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
-                  amount="N25,000.00"
-                  noStock
-                /> */}
+                {bestSellers && (
+                  <>
+                    <Device
+                      img={phone1Img}
+                      name="Samsung A23"
+                      specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
+                      amount="N25,000.00"
+                    />
+                    <Device
+                      img={phone1Img}
+                      name="Samsung A23"
+                      specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
+                      amount="N25,000.00"
+                      noStock
+                    />
+                    <Device
+                      img={phone1Img}
+                      name="Samsung A23"
+                      specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
+                      amount="N25,000.00"
+                    />
+                    <Device
+                      img={phone1Img}
+                      name="Samsung A23"
+                      specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
+                      amount="N25,000.00"
+                    />
+                    <Device
+                      img={phone1Img}
+                      name="Samsung A23"
+                      specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
+                      amount="N25,000.00"
+                      noStock
+                    />
+                  </>
+                )}
               </div>
             </div>
           </>
@@ -648,6 +660,53 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
           <img
             className="close-icon"
             onClick={modalPay.onClose}
+            src={cancelIcon}
+            alt="cancelIcon"
+          />
+        </div>
+      </Modal>
+      <Modal
+        open={modalCategory.isOpen}
+        onOk={modalCategory.onClose}
+        className="payback-modal"
+        centered
+      >
+        <div className="modal-container">
+          <div style={{ margin: "16px 0" }}>
+            <Collapse accordion expandIconPosition="right" className="collapse">
+              <Panel header="Categories" key="1">
+                <ul>
+                  <li>Household</li>
+                  <li>Mobile Phones</li>
+                  <li>Energy Finance</li>
+                  <li>Gadgets</li>
+                </ul>
+              </Panel>
+            </Collapse>
+          </div>
+          <div style={{ margin: "16px 0" }}>
+            <Collapse accordion expandIconPosition="right" className="collapse">
+              <Panel header="Brand" key="2">
+                <ul>
+                  <li>Household</li>
+                  <li>Mobile Phones</li>
+                  <li>Energy Finance</li>
+                  <li>Gadgets</li>
+                </ul>
+              </Panel>
+            </Collapse>
+          </div>
+          <Input label="Max Price" type="text" />
+          <Input label="Min Price" type="text" />
+          <Button
+            style={{ height: 56 }}
+            label="Filter"
+            variant="primary"
+            onClick={modalCategory.onClose}
+          />
+          <img
+            className="close-icon"
+            onClick={modalCategory.onClose}
             src={cancelIcon}
             alt="cancelIcon"
           />

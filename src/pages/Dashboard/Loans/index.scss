@@ -145,6 +145,11 @@
     }
   }
 
+  .best-text {
+    color: colors.$secondaryBlue;
+    margin-bottom: 10px;
+  }
+
   .search {
     display: flex;
     align-items: center;
@@ -167,7 +172,6 @@
     .input-wrapper {
       display: flex;
       height: 100%;
-      width: 460px;
 
       input {
         width: 100%;
