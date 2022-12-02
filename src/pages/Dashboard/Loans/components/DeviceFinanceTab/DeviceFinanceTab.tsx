@@ -40,6 +40,7 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
   const [orderPhone, setOrderPhone] = useState(false);
   const [deviceColor, setDeviceColor] = useState("pink");
   const [viewDevice, setViewDevice] = useState(false);
+  const [bestSellers, setBestSellers] = useState(false);
 
   const modalPay = useDisclosure();
   const modalPin = useDisclosure();
@@ -89,6 +90,7 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
       <div className="my-loans">
         {showDeviceFinanceLanding && !showDeviceOrdered ? (
           <>
+            {bestSellers && <p className="best-text">Best sellers</p>}
             <div className="row">
               <div className="search">
                 <div className="dropdown">
@@ -105,36 +107,46 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
               </div>
             </div>
 
-            <div className="device-finance-banner">
-              <img src={lady} alt="banner" />
-            </div>
-            <div className="row">
-              <div className="category">
-                <div>
-                  <Category img={blender} />
-                  <h4 className="device-info-header">Household Goods</h4>
+            {/* Temporary fix till API integrations start */}
+            {!bestSellers && (
+              <>
+                <div className="device-finance-banner">
+                  <img src={lady} alt="banner" />
                 </div>
-                <div>
-                  <Category img={phone} />
-                  <h4 className="device-info-header">Mobile Phones</h4>
+                <div className="row">
+                  <div className="category">
+                    <div>
+                      <Category img={blender} />
+                      <h4 className="device-info-header">Household Goods</h4>
+                    </div>
+                    <div>
+                      <Category img={phone} />
+                      <h4 className="device-info-header">Mobile Phones</h4>
+                    </div>
+                    <div>
+                      <Category img={inverter} />
+                      <h4 className="device-info-header">Energy Finance</h4>
+                    </div>
+                    <div>
+                      <Category img={playstation} />
+                      <h4 className="device-info-header">Gadgets</h4>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <Category img={inverter} />
-                  <h4 className="device-info-header">Energy Finance</h4>
-                </div>
-                <div>
-                  <Category img={playstation} />
-                  <h4 className="device-info-header">Gadgets</h4>
-                </div>
-              </div>
-            </div>
 
-            <div className="row">
-              <div className="best-sellers">
-                <h4>Best Sellers</h4>
-                <h4>View All</h4>
-              </div>
-            </div>
+                <div className="row">
+                  <div className="best-sellers">
+                    <h4>Best Sellers</h4>
+                    <h4
+                      style={{ cursor: "pointer" }}
+                      onClick={() => setBestSellers(true)}
+                    >
+                      View All
+                    </h4>
+                  </div>
+                </div>
+              </>
+            )}
             <div className="row">
               <div className="devices">
                 <Device
@@ -177,38 +189,42 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
                   amount="N25,000.00"
                   onClick={handleDeviceClicked}
                 />
-                {/* <Device
-                  img={phone1Img}
-                  name="Samsung A23"
-                  specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
-                  amount="N25,000.00"
-                />
-                <Device
-                  img={phone1Img}
-                  name="Samsung A23"
-                  specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
-                  amount="N25,000.00"
-                  noStock
-                />
-                <Device
-                  img={phone1Img}
-                  name="Samsung A23"
-                  specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
-                  amount="N25,000.00"
-                />
-                <Device
-                  img={phone1Img}
-                  name="Samsung A23"
-                  specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
-                  amount="N25,000.00"
-                />
-                <Device
-                  img={phone1Img}
-                  name="Samsung A23"
-                  specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
-                  amount="N25,000.00"
-                  noStock
-                /> */}
+                {bestSellers && (
+                  <>
+                    <Device
+                      img={phone1Img}
+                      name="Samsung A23"
+                      specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
+                      amount="N25,000.00"
+                    />
+                    <Device
+                      img={phone1Img}
+                      name="Samsung A23"
+                      specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
+                      amount="N25,000.00"
+                      noStock
+                    />
+                    <Device
+                      img={phone1Img}
+                      name="Samsung A23"
+                      specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
+                      amount="N25,000.00"
+                    />
+                    <Device
+                      img={phone1Img}
+                      name="Samsung A23"
+                      specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
+                      amount="N25,000.00"
+                    />
+                    <Device
+                      img={phone1Img}
+                      name="Samsung A23"
+                      specs={["Dual Sim", "Fingerprint sensors", "Waterproof"]}
+                      amount="N25,000.00"
+                      noStock
+                    />
+                  </>
+                )}
               </div>
             </div>
           </>
