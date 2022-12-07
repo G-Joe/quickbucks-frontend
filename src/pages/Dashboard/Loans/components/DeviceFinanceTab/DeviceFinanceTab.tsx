@@ -141,15 +141,14 @@ const DeviceFinanceTab = ({ taken, outstanding }: any) => {
                 </div>
 
                 <div className="row">
-                  <div className="best-sellers">
-                    <h4>Best Sellers</h4>
-                    <h4
-                      style={{ cursor: "pointer" }}
-                      onClick={() => setBestSellers(true)}
-                    >
-                      View All
-                    </h4>
-                  </div>
+                  <table className="category-table">
+                    <tr>
+                      <td className="left">Best Sellers</td>
+                      <td className="right" style={{ cursor: "pointer" }}
+                      onClick={() => setBestSellers(true)}>View All</td>
+                    </tr>
+                  </table>
+                  
                 </div>
               </>
             )}

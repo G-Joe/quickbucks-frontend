@@ -43,6 +43,8 @@
 .butt {
   width: 99px;
   margin: auto;
+  margin-top:7px;
+  margin-bottom:10px;
 }
 
 button.btn {
@@ -119,12 +121,18 @@ button.btn {
 
   .summary {
     flex-direction: column;
+   
   }
 
   .butt {
     width: 99px;
-    margin: auto;
+    margin-left: 0px;
+    
+  }
 
+  .summary-box{
+    padding-left:40px;
+    text-align:left;
   }
 }
 
